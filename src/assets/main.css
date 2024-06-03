@@ -14,6 +14,17 @@ body {
   display: flex;
   margin: auto;
 }
+nav{
+  color:#b82601;
+  margin:auto;
+}
+
+a {
+  color:#062F4F;
+}
+a:hover{
+  color:#813772;
+}
 
 h1 {
   margin: auto;
