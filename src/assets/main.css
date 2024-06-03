@@ -3,27 +3,45 @@ body {
 }
 
 #app {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: 'gutter main';
+  grid-template-columns: 60px 9fr;
 }
 #contents {
   display: block;
+}
+#main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+}
+#theme {
+  color: #fff;
+  border-color: gray;
+  border-style: dotted;
+}
+
+#theme-config {
+  grid-area: gutter-start;
 }
 
 #title {
   display: flex;
   margin: auto;
 }
-nav{
-  color:#b82601;
-  margin:auto;
+
+nav {
+  color: #b82601;
+  margin: auto;
+  display: flex;
+  gap: 50px;
 }
 
 a {
-  color:#062F4F;
+  color: #ff3b3f;
 }
-a:hover{
-  color:#813772;
+a:hover {
+  color: #813772;
 }
 
 h1 {
@@ -43,4 +61,18 @@ main {
 }
 p {
   color: #b82601;
+}
+.router-link-active {
+  color: white;
+}
+span {
+  color: white;
+}
+
+li {
+  color: white;
+  display: unset;
+}
+ul {
+  padding-left: 20px;
 }
