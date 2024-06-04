@@ -1,1 +1,0 @@
-import{d as e,c as a,n as t,u as n,o,e as s}from"./index-BQM_KGeC.js";const p=e({__name:"DatabaseView",setup(r){return(c,l)=>(o(),a("h2",{style:t(n(s)("h2"))},"My database experience",4))}});export{p as default};
