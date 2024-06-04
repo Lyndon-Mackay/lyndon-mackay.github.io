@@ -25,13 +25,21 @@ const themeListDisplay = ref(false);
 watch(
   themes,
   () => {
-    setTheme(currentTheme.value);
+    for (let index = 0; index < routeAndStyleList.value.length; index++) {
+      const x = routeAndStyleList.value[index];
+      if (x.active) {
+        x.style = themeStoreInstance.getLinkActiveColour();
+      } else {
+        x.style = elementColour("a");
+      }
+    }
+    console.log("change");
   },
   { deep: true },
 );
 
 watch(currentTheme, () => {
-  setTheme(currentTheme.value);
+  console.log("current theme change");
 });
 
 function toggleThemeDisplay() {
@@ -114,13 +122,14 @@ router.afterEach((to) => {
     </section>
     <section></section>
 
-    <nav>
+    <nav class="mobile-dropdown">
       <RouterLink
         v-for="route in routeAndStyleList"
         :to="{ name: route.name }"
         :id="'route-' + route.name?.toString()"
         :key="route.name"
         :style="route.style"
+        class="mobile-dropdown-content"
         >{{ route.name }}</RouterLink
       >
     </nav>
