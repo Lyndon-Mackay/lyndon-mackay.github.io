@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: #2a3439;
 }
 
 #app {
@@ -38,7 +38,7 @@ nav {
 }
 
 a {
-  color: #ff3b3f;
+  color: cornsilk;
 }
 a:hover {
   color: #813772;
@@ -47,12 +47,12 @@ a:hover {
 h1 {
   margin: auto;
   font-size: xxx-large;
-  color: #b82601;
+  color: #ffc832;
 }
 h2 {
   align-self: center;
   font-size: xx-large;
-  color: #b82601;
+  color: #ffc832;
 }
 main {
   display: flex;
@@ -61,10 +61,10 @@ main {
 }
 p,
 label {
-  color: #b82601;
+  color: #ffc832;
 }
 .router-link-active {
-  color: white;
+  color: forestgreen;
 }
 span {
   color: white;
