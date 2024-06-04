@@ -44,12 +44,6 @@ function setTheme(name: string) {
       <RouterLink v-for="route in routeList" :to="{ name: route.name }" :key="route.name">{{
         route.name
       }}</RouterLink>
-      <RouterLink :style="elementColour('a')" to="/">Home</RouterLink>
-      <RouterLink :style="elementColour('a')" to="/rust">Rust</RouterLink>
-      <RouterLink :style="elementColour('a')" to="/csharp">C#/dotnet</RouterLink>
-      <RouterLink :style="elementColour('a')" to="/database">Databases</RouterLink>
-      <RouterLink :style="elementColour('a')" to="/web">Web-development</RouterLink>
-      <RouterLink :style="elementColour('a')" to="/construction">Construction</RouterLink>
     </nav>
 
     <main>
