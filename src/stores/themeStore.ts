@@ -63,5 +63,14 @@ export const themeStore = defineStore('theme', () => {
     return color
   }
 
-  return { themes, currentTheme, setCurrentTheme, getColourForElement }
+  function getLinkActiveColour() {
+    if (themeIndex.value == -1) {
+      return ''
+    }
+
+    const theme = themes.value[themeIndex.value]
+    return theme.linkActive
+  }
+
+  return { themes, currentTheme, setCurrentTheme, getColourForElement, getLinkActiveColour }
 })
