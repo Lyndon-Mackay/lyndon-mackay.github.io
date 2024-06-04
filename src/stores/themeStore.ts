@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref, type Ref } from 'vue'
+import { ref, type Ref, type StyleValue } from 'vue'
 
 export const themeStore = defineStore('theme', () => {
   const textElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'span']
@@ -63,13 +63,13 @@ export const themeStore = defineStore('theme', () => {
     return color
   }
 
-  function getLinkActiveColour() {
+  function getLinkActiveColour(): StyleValue {
     if (themeIndex.value == -1) {
-      return ''
+      return {}
     }
 
     const theme = themes.value[themeIndex.value]
-    return theme.linkActive
+    return { color: theme.linkActive }
   }
 
   return { themes, currentTheme, setCurrentTheme, getColourForElement, getLinkActiveColour }

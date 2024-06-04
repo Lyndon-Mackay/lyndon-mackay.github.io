@@ -30,7 +30,7 @@ function setTheme(name: string) {
   themeStoreInstance.setCurrentTheme(name)
   routeAndStyleList.value.forEach((x) => {
     if (x.active) {
-      x.style = { color: themeStoreInstance.getLinkActiveColour() }
+      x.style = themeStoreInstance.getLinkActiveColour()
     } else {
       x.style = elementColour('a')
     }
@@ -58,7 +58,7 @@ router.afterEach((to) => {
 
     if (to.name == id) {
       routeAndStyleList.value.push({
-        style: { color: themeStoreInstance.getLinkActiveColour() },
+        style: themeStoreInstance.getLinkActiveColour(),
         name: id,
         active: true
       })
