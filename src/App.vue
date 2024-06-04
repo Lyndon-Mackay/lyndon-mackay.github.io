@@ -25,27 +25,13 @@ const themeListDisplay = ref(false);
 watch(
   themes,
   () => {
-    routeAndStyleList.value.forEach((x) => {
-      if (x.active) {
-        x.style = themeStoreInstance.getLinkActiveColour();
-      } else {
-        x.style = elementColour("a");
-      }
-    });
-    console.log("change");
+    setTheme(currentTheme.value);
   },
   { deep: true },
 );
 
 watch(currentTheme, () => {
-  routeAndStyleList.value.forEach((x) => {
-    if (x.active) {
-      x.style = themeStoreInstance.getLinkActiveColour();
-    } else {
-      x.style = elementColour("a");
-    }
-  });
-  console.log("current theme change");
+  setTheme(currentTheme.value);
 });
 
 function toggleThemeDisplay() {
