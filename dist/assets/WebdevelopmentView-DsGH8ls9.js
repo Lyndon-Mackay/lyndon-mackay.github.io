@@ -1,1 +1,0 @@
-import{_ as e,o as n,c as t}from"./index-CtAdAfOa.js";const c={};function o(r,s){return n(),t("h2",null,"Some web development including this website")}const _=e(c,[["render",o]]);export{_ as default};

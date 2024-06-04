@@ -5,7 +5,7 @@ body {
 #app {
   display: grid;
   grid-template-areas: 'gutter main';
-  grid-template-columns: 60px 9fr;
+  grid-template-columns: 90px 9fr;
 }
 #contents {
   display: block;
@@ -75,4 +75,5 @@ li {
 }
 ul {
   padding-left: 20px;
+  display: inline-grid;
 }

@@ -1,32 +1,55 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { elementColour } from './themes/index'
 
-const themeListHidden = ref(true)
-function test() {
-  themeListHidden.value = !themeListHidden.value
+import { themeStore } from './stores/themeStore'
+import { ref, type VNodeRef } from 'vue'
+import { storeToRefs } from 'pinia'
+
+import { useRoute, useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const routeList = ref(router.getRoutes())
+
+const themeStoreInstance = themeStore()
+const { themes, currentTheme } = storeToRefs(themeStoreInstance)
+const themeListDisplay = ref(false)
+
+function toggleThemeDisplay() {
+  themeListDisplay.value = !themeListDisplay.value
+}
+
+function setTheme(name: string) {
+  themeStoreInstance.setCurrentTheme(name)
 }
 </script>
 
 <template>
   <div>
-    <span id="theme" @click="test">Theme</span>
-    <ul :hidden="themeListHidden">
-      <li>Default</li>
+    <span id="theme" @click="toggleThemeDisplay" @mouseout="console.log('you left')">Theme</span>
+    <ul v-show="themeListDisplay">
+      <li @click="setTheme('default')">Default</li>
+      <li v-for="theme in themes" :key="theme.name" @click="setTheme(theme.name)">
+        {{ theme.name }}
+      </li>
     </ul>
   </div>
   <div id="main">
     <section id="title">
-      <h1>Lyndon's website</h1>
+      <h1 :style="elementColour('h1')">Lyndon's website</h1>
     </section>
     <section></section>
 
     <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/rust">Rust</RouterLink>
-      <RouterLink to="/csharp">C#/dotnet</RouterLink>
-      <RouterLink to="/database">Databases</RouterLink>
-      <RouterLink to="/web">Web-development</RouterLink>
-      <RouterLink to="/construction">Construction</RouterLink>
+      <RouterLink v-for="route in routeList" :to="{ name: route.name }" :key="route.name">{{
+        route.name
+      }}</RouterLink>
+      <RouterLink :style="elementColour('a')" to="/">Home</RouterLink>
+      <RouterLink :style="elementColour('a')" to="/rust">Rust</RouterLink>
+      <RouterLink :style="elementColour('a')" to="/csharp">C#/dotnet</RouterLink>
+      <RouterLink :style="elementColour('a')" to="/database">Databases</RouterLink>
+      <RouterLink :style="elementColour('a')" to="/web">Web-development</RouterLink>
+      <RouterLink :style="elementColour('a')" to="/construction">Construction</RouterLink>
     </nav>
 
     <main>
