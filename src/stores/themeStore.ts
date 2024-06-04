@@ -1,76 +1,99 @@
-import { defineStore } from 'pinia'
-import { ref, type Ref, type StyleValue } from 'vue'
+import { defineStore } from "pinia";
+import { ref, type Ref, type StyleValue } from "vue";
 
-export const themeStore = defineStore('theme', () => {
-  const textElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'span']
-  const themeIndex = ref(-1)
+export const themeStore = defineStore("theme", () => {
+  const textElements = ["h1", "h2", "h3", "h4", "h5", "p", "span"];
+  const themeIndex = ref(-1);
 
   interface Theme {
-    name: string
-    background: string
-    text: string
-    link: string
-    linkActive: string
-    linkHover: string
+    name: string;
+    background: string;
+    text: string;
+    link: string;
+    linkActive: string;
   }
-  type statusKey = keyof Theme
+  type statusKey = keyof Theme;
 
-  const themes: Ref<Theme[]> = ref([])
+  const themes: Ref<Theme[]> = ref([]);
 
   const water: Theme = {
-    name: 'Water',
-    background: '#083CSD',
-    text: '#328CC1',
-    link: '#D9B310',
-    linkActive: '#FFFFFF',
-    linkHover: '#CDS360'
-  }
-  themes.value.push(water)
+    name: "Water",
+    background: "#083CSD",
+    text: "#328CC1",
+    link: "#D9B310",
+    linkActive: "#FFFFFF",
+  };
+  themes.value.push(water);
 
-  const currentTheme = ref('default')
+  const currentTheme = ref("default");
 
   function setCurrentTheme(newThemeName: string) {
-    currentTheme.value = newThemeName
-    themeIndex.value = themes.value.findIndex((x) => x.name == newThemeName)
+    currentTheme.value = newThemeName;
+    themeIndex.value = themes.value.findIndex((x) => x.name == newThemeName);
   }
 
   function classifyElement(elementName: string): statusKey | null {
     if (textElements.findIndex((x) => x == elementName) != -1) {
-      return 'text'
+      return "text";
     }
-    if (elementName == 'a') {
-      return 'link'
+    if (elementName == "a") {
+      return "link";
     }
 
-    return null
+    return null;
   }
 
   function getColourForElement(elementName: string): string {
     if (themeIndex.value == -1) {
-      return ''
+      return "";
     }
 
-    const theme = themes.value[themeIndex.value]
+    const theme = themes.value[themeIndex.value];
 
-    const classification = classifyElement(elementName)
+    const classification = classifyElement(elementName);
 
     if (classification == null) {
-      return ''
+      return "";
     }
 
-    const color = theme[classification]
+    const color = theme[classification];
 
-    return color
+    return color;
   }
 
   function getLinkActiveColour(): StyleValue {
     if (themeIndex.value == -1) {
-      return {}
+      return {};
     }
 
-    const theme = themes.value[themeIndex.value]
-    return { color: theme.linkActive }
+    const theme = themes.value[themeIndex.value];
+    return { color: theme.linkActive };
   }
 
-  return { themes, currentTheme, setCurrentTheme, getColourForElement, getLinkActiveColour }
-})
+  function addTheme(
+    name: string,
+    textColour: string,
+    linkColour: string,
+    LinkActiveColour: string,
+  ) {
+    themes.value.push({
+      name: name,
+      background: "#000000",
+      text: textColour,
+      link: linkColour,
+      linkActive: LinkActiveColour,
+    });
+    currentTheme.value = name;
+    themeIndex.value;
+    themes.value.length - 1;
+  }
+
+  return {
+    themes,
+    currentTheme,
+    setCurrentTheme,
+    getColourForElement,
+    getLinkActiveColour,
+    addTheme,
+  };
+});

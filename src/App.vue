@@ -1,77 +1,112 @@
 <script setup lang="ts">
-import { elementColour } from './themes/index'
+import { elementColour } from "./themes/index";
 
-import { themeStore } from './stores/themeStore'
-import { ref, type Ref, type StyleValue } from 'vue'
-import { storeToRefs } from 'pinia'
+import { themeStore } from "./stores/themeStore";
+import { ref, watch, type Ref, type StyleValue } from "vue";
+import { storeToRefs } from "pinia";
 
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter } from "vue-router";
 
 interface RouteStyle {
-  name: string
-  style: StyleValue
-  active: boolean
+  name: string;
+  style: StyleValue;
+  active: boolean;
 }
 
-const router = useRouter()
+const router = useRouter();
 
-const routeList = ref(router.getRoutes())
-const routeAndStyleList: Ref<RouteStyle[]> = ref([])
+const routeList = ref(router.getRoutes());
+const routeAndStyleList: Ref<RouteStyle[]> = ref([]);
 
-const themeStoreInstance = themeStore()
-const { themes, currentTheme } = storeToRefs(themeStoreInstance)
-const themeListDisplay = ref(false)
+const themeStoreInstance = themeStore();
+const { themes, currentTheme } = storeToRefs(themeStoreInstance);
+const themeListDisplay = ref(false);
+
+watch(
+  themes,
+  () => {
+    routeAndStyleList.value.forEach((x) => {
+      if (x.active) {
+        x.style = themeStoreInstance.getLinkActiveColour();
+      } else {
+        x.style = elementColour("a");
+      }
+    });
+    console.log("change");
+  },
+  { deep: true },
+);
+
+watch(currentTheme, () => {
+  routeAndStyleList.value.forEach((x) => {
+    if (x.active) {
+      x.style = themeStoreInstance.getLinkActiveColour();
+    } else {
+      x.style = elementColour("a");
+    }
+  });
+  console.log("current theme change");
+});
 
 function toggleThemeDisplay() {
-  themeListDisplay.value = !themeListDisplay.value
+  themeListDisplay.value = !themeListDisplay.value;
 }
 
 function setTheme(name: string) {
-  themeStoreInstance.setCurrentTheme(name)
+  themeStoreInstance.setCurrentTheme(name);
   routeAndStyleList.value.forEach((x) => {
     if (x.active) {
-      x.style = themeStoreInstance.getLinkActiveColour() 
+      x.style = themeStoreInstance.getLinkActiveColour();
     } else {
-      x.style = elementColour('a')
+      x.style = elementColour("a");
     }
-  })
+  });
 }
 
 routeList.value.forEach((x) => {
-  const id = x.name?.toString() ?? ''
+  const id = x.name?.toString() ?? "";
 
-  routeAndStyleList.value.push({ style: {}, name: id, active: false })
-})
+  routeAndStyleList.value.push({ style: {}, name: id, active: false });
+});
 
 router.afterEach((to) => {
-  routeAndStyleList.value = []
+  routeAndStyleList.value = [];
   routeList.value.forEach((x) => {
-    const id = x.name?.toString() ?? ''
-    if (id == '') {
-      return
+    const id = x.name?.toString() ?? "";
+    if (id == "") {
+      return;
     }
 
-    const link = document.getElementById('route-' + id)
+    const link = document.getElementById("route-" + id);
     if (link == null) {
-      return
+      return;
     }
 
     if (to.name == id) {
       routeAndStyleList.value.push({
-        style:  themeStoreInstance.getLinkActiveColour() ,
+        style: themeStoreInstance.getLinkActiveColour(),
         name: id,
-        active: true
-      })
+        active: true,
+      });
     } else {
-      routeAndStyleList.value.push({ style: elementColour('a'), name: id, active: false })
+      routeAndStyleList.value.push({
+        style: elementColour("a"),
+        name: id,
+        active: false,
+      });
     }
-  })
-})
+  });
+});
 </script>
 
 <template>
   <div id="themeDiv">
-    <span id="theme" @click="toggleThemeDisplay" @mouseout="console.log('you left')">Theme</span>
+    <span
+      id="theme"
+      @click="toggleThemeDisplay"
+      @mouseout="console.log('you left')"
+      >Theme</span
+    >
     <ul v-show="themeListDisplay">
       <li @click="setTheme('default')">Default</li>
       <li
@@ -82,7 +117,9 @@ router.afterEach((to) => {
       >
         {{ theme.name }}
       </li>
-      <li>Custom Theme</li>
+      <li>
+        <RouterLink :to="{ name: 'Custom' }">Custom Theme</RouterLink>
+      </li>
     </ul>
   </div>
   <div id="main">

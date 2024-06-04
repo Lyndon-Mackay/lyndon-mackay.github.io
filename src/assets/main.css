@@ -4,7 +4,7 @@ body {
 
 #app {
   display: grid;
-  grid-template-areas: 'gutter main';
+  grid-template-areas: "gutter main";
   grid-template-columns: 90px 9fr;
 }
 #contents {
@@ -59,7 +59,8 @@ main {
   flex-direction: column;
   align-self: center;
 }
-p {
+p,
+label {
   color: #b82601;
 }
 .router-link-active {

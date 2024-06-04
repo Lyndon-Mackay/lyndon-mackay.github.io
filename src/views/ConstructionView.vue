@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { elementColour } from '../themes/index'
+import { elementColour } from "../themes/index";
 </script>
 
 <template>
