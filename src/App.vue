@@ -70,7 +70,7 @@ router.afterEach((to) => {
 </script>
 
 <template>
-  <div>
+  <div id="themeDiv">
     <span id="theme" @click="toggleThemeDisplay" @mouseout="console.log('you left')">Theme</span>
     <ul v-show="themeListDisplay">
       <li @click="setTheme('default')">Default</li>
