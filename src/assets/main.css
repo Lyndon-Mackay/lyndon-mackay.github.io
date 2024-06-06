@@ -130,3 +130,12 @@ span {
     border-width: 1px;
   }
 }
+
+@media (min-width:1080px) {
+  nav:hover {
+    transform: scale(1.5);
+    gap: 15px;
+  }
+
+
+}
