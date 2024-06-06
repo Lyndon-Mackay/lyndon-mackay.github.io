@@ -98,7 +98,7 @@ router.afterEach((to) => {
 <template>
   <div id="themeDiv">
     <span id="theme" @click="toggleThemeDisplay" @mouseout="console.log('you left')">Theme</span>
-    <ul v-show="themeListDisplay">
+    <ul class="themeList" v-show="themeListDisplay">
       <li class="themeListItem" @click="setTheme('default')">Default</li>
       <li class="themeListItem" v-for="theme in themes" :key="theme.name" :id="'route-' + theme.name"
         @click="setTheme(theme.name)">
