@@ -30,7 +30,7 @@ function toggleThemeDisplay() {
   themeListDisplay.value = !themeListDisplay.value;
 }
 
-function setTheme(name?: string) {
+function setTheme(name: string) {
 
   themeStoreInstance.setCurrentTheme(name);
 
@@ -87,7 +87,12 @@ resetRouterList();
 
 
 router.afterEach((to) => {
-  resetRouterList(to.name)
+  if(to.name == null){
+    resetRouterList()
+  }
+  else{
+  resetRouterList(to.name.toString())
+  }
 });
 </script>
 
