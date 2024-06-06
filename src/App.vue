@@ -87,11 +87,10 @@ resetRouterList();
 
 
 router.afterEach((to) => {
-  if(to.name == null){
+  if (to.name == null) {
     resetRouterList()
-  }
-  else{
-  resetRouterList(to.name.toString())
+  } else {
+    resetRouterList(to.name.toString())
   }
 });
 </script>
@@ -100,11 +99,12 @@ router.afterEach((to) => {
   <div id="themeDiv">
     <span id="theme" @click="toggleThemeDisplay" @mouseout="console.log('you left')">Theme</span>
     <ul v-show="themeListDisplay">
-      <li @click="setTheme('default')">Default</li>
-      <li v-for="theme in themes" :key="theme.name" :id="'route-' + theme.name" @click="setTheme(theme.name)">
+      <li class="themeListItem" @click="setTheme('default')">Default</li>
+      <li class="themeListItem" v-for="theme in themes" :key="theme.name" :id="'route-' + theme.name"
+        @click="setTheme(theme.name)">
         {{ theme.name }}
       </li>
-      <li>
+      <li class="themeListItem">
         <RouterLink :to="{ name: 'Custom' }">Custom Theme</RouterLink>
       </li>
     </ul>

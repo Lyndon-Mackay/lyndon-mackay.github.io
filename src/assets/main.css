@@ -16,6 +16,8 @@ body {
   grid-area: main;
   display: flex;
   flex-direction: column;
+  justify-self: center;
+  max-width: 900px;
 }
 
 #theme {
@@ -33,6 +35,20 @@ body {
   display: flex;
   margin: auto;
 }
+
+
+.themeListItem {
+  color: white;
+  display: unset;
+}
+
+.themeList {
+
+  padding-left: 20px;
+  display: inline-grid;
+
+}
+
 
 nav {
   color: #b82601;
@@ -61,16 +77,22 @@ h2 {
   color: #ffc832;
 }
 
+h3,
+h4,
+h5,
+p,
+label,
+ul,
+li {
+  color: #ffc832
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-self: center;
 }
 
-p,
-label {
-  color: #ffc832;
-}
 
 .router-link-active {
   color: forestgreen;
@@ -78,16 +100,6 @@ label {
 
 span {
   color: white;
-}
-
-li {
-  color: white;
-  display: unset;
-}
-
-ul {
-  padding-left: 20px;
-  display: inline-grid;
 }
 
 @media (max-width: 800px) {

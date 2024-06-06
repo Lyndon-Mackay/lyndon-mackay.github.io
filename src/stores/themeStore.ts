@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import { ref, type Ref, type StyleValue } from "vue";
 
 export const themeStore = defineStore("theme", () => {
-  const textElements = ["h1", "h2", "h3", "h4", "h5", "p", "span", "label"];
+  const textElements = ["h1", "h2", "h3", "h4", "h5", "label", "li", "p", "span"];
   const themeIndex = ref(-1);
 
   interface Theme {
