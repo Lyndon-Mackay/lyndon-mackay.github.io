@@ -22,33 +22,20 @@ const themeStoreInstance = themeStore();
 const { themes, currentTheme } = storeToRefs(themeStoreInstance);
 const themeListDisplay = ref(false);
 
-watch(
-  themes,
-  () => {
-    for (let index = 0; index < routeAndStyleList.value.length; index++) {
-      const x = routeAndStyleList.value[index];
-      if (x.active) {
-        x.style = themeStoreInstance.getLinkActiveColour();
-      } else {
-        x.style = elementColour("a");
-      }
-    }
-    console.log("change");
-  },
-  { deep: true },
-);
-
 watch(currentTheme, () => {
-  console.log("current theme change");
+  setTheme(currentTheme.value)
 });
 
 function toggleThemeDisplay() {
   themeListDisplay.value = !themeListDisplay.value;
 }
 
-function setTheme(name: string) {
+function setTheme(name?: string) {
+
   themeStoreInstance.setCurrentTheme(name);
+
   routeAndStyleList.value.forEach((x) => {
+
     if (x.active) {
       x.style = themeStoreInstance.getLinkActiveColour();
     } else {
@@ -56,19 +43,23 @@ function setTheme(name: string) {
     }
   });
 }
+function resetRouterList(toName?: string) {
 
-routeList.value.forEach((x) => {
-  const id = x.name?.toString() ?? "";
-
-  routeAndStyleList.value.push({ style: {}, name: id, active: false });
-});
-
-router.afterEach((to) => {
   routeAndStyleList.value = [];
+
   routeList.value.forEach((x) => {
     const id = x.name?.toString() ?? "";
     if (id == "") {
       return;
+    }
+    if (toName == null) {
+
+      routeAndStyleList.value.push({
+        style: elementColour("a"),
+        name: id,
+        active: false,
+      });
+      return
     }
 
     const link = document.getElementById("route-" + id);
@@ -76,7 +67,7 @@ router.afterEach((to) => {
       return;
     }
 
-    if (to.name == id) {
+    if (toName == id) {
       routeAndStyleList.value.push({
         style: themeStoreInstance.getLinkActiveColour(),
         name: id,
@@ -90,25 +81,22 @@ router.afterEach((to) => {
       });
     }
   });
+}
+
+resetRouterList();
+
+
+router.afterEach((to) => {
+  resetRouterList(to.name)
 });
 </script>
 
 <template>
   <div id="themeDiv">
-    <span
-      id="theme"
-      @click="toggleThemeDisplay"
-      @mouseout="console.log('you left')"
-      >Theme</span
-    >
+    <span id="theme" @click="toggleThemeDisplay" @mouseout="console.log('you left')">Theme</span>
     <ul v-show="themeListDisplay">
       <li @click="setTheme('default')">Default</li>
-      <li
-        v-for="theme in themes"
-        :key="theme.name"
-        :id="'route-' + theme.name"
-        @click="setTheme(theme.name)"
-      >
+      <li v-for="theme in themes" :key="theme.name" :id="'route-' + theme.name" @click="setTheme(theme.name)">
         {{ theme.name }}
       </li>
       <li>
@@ -123,15 +111,8 @@ router.afterEach((to) => {
     <section></section>
 
     <nav class="mobile-dropdown">
-      <RouterLink
-        v-for="route in routeAndStyleList"
-        :to="{ name: route.name }"
-        :id="'route-' + route.name?.toString()"
-        :key="route.name"
-        :style="route.style"
-        class="mobile-dropdown-content"
-        >{{ route.name }}</RouterLink
-      >
+      <RouterLink v-for="route in routeAndStyleList" :to="{ name: route.name }" :id="'route-' + route.name?.toString()"
+        :key="route.name" :style="route.style" class="mobile-dropdown-content">{{ route.name }}</RouterLink>
     </nav>
 
     <main>

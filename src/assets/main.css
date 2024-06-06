@@ -7,15 +7,19 @@ body {
   grid-template-areas: "gutter main";
   grid-template-columns: 1fr 9fr;
 }
+
 #contents {
   display: block;
 }
+
 #main {
   grid-area: main;
   display: flex;
   flex-direction: column;
 }
+
 #theme {
+  display: block;
   color: #fff;
   border-color: gray;
   border-style: dotted;
@@ -40,6 +44,7 @@ nav {
 a {
   color: cornsilk;
 }
+
 a:hover {
   color: #813772;
 }
@@ -49,23 +54,28 @@ h1 {
   font-size: xxx-large;
   color: #ffc832;
 }
+
 h2 {
   align-self: center;
   font-size: xx-large;
   color: #ffc832;
 }
+
 main {
   display: flex;
   flex-direction: column;
   align-self: center;
 }
+
 p,
 label {
   color: #ffc832;
 }
+
 .router-link-active {
   color: forestgreen;
 }
+
 span {
   color: white;
 }
@@ -74,6 +84,7 @@ li {
   color: white;
   display: unset;
 }
+
 ul {
   padding-left: 20px;
   display: inline-grid;
@@ -99,6 +110,7 @@ ul {
     flex-direction: column;
     gap: 1px;
   }
+
   .mobile-dropdown-content {
     border-style: solid;
     border-width: 1px;
