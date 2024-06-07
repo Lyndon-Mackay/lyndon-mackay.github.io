@@ -2,7 +2,10 @@
 import { elementColour } from "../themes/index";
 import * as markdown from "../themes/markdown"
 
-const mkd = markdown.markDownInstance().mkd
+import mk from "../markdown/home.md?raw"
+
+
+const mkd = markdown.markDownInstance(mk).mkd
 </script>
 
 

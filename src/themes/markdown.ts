@@ -4,21 +4,29 @@ import { onMounted, ref, watch } from "vue";
 import { themeStore } from "../stores/themeStore";
 import { storeToRefs } from "pinia";
 import { marked } from 'marked'
-import mk from "../markdown/home.md?raw"
 
 
 
 
 function themeChange() {
-  const thing = document.querySelector("#contents")
-  if (thing == null) {
+  const contents = document.querySelector("#contents")
+  if (contents == null) {
     return
   }
 
-  for (let index = 0; index < thing.children.length; index++) {
+  elementChildrenStyle(contents)
 
-    const element = thing.children[index];
+}
+
+function elementChildrenStyle(el: Element) {
+
+  for (let index = 0; index < el.children.length; index++) {
+
+    const element = el.children[index];
+
+    elementChildrenStyle(element)
     const tag = element.tagName.toLowerCase()
+
 
     element.style.color = elementColour(tag).color
   }
@@ -26,7 +34,8 @@ function themeChange() {
 
 
 
-export const markDownInstance = () => {
+export const markDownInstance = (mk: string) => {
+
 
   const themeStoreInstance = themeStore();
   const { themes, currentTheme } = storeToRefs(themeStoreInstance);
