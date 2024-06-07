@@ -22,7 +22,7 @@ jobs:
             git add dist
       - name: build
         run: |
-         git commit -am --author="git build <lyndondmackay@gmail.com>" "buid changes from main"
+         git commit --author="git build <lyndondmackay@gmail.com>" -am "buid changes from main"
       - name: Run git subtree push
         run: |
           git subtree push --prefix dist origin gh-pages
