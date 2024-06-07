@@ -29,6 +29,21 @@ const routes = [
     component: () => import("../views/ConstructionView.vue"),
   },
   {
+    path: "/communication",
+    name: "Communication",
+    component: () => import("../views/CommunicationView.vue"),
+  },
+  {
+    path: "/excel",
+    name: "Excel",
+    component: () => import("../views/ExcelView.vue"),
+  },
+  {
+    path: "/regex",
+    name: "Regular_Epressions",
+    component: () => import("../views/RegexView.vue"),
+  },
+  {
     path: "/custom",
     name: "Custom",
     component: () => import("../views/CustomView.vue"),
