@@ -1,4 +1,4 @@
-import{d as a,m as o,c as r,a as e,n as s,u as n,F as i,o as m,e as l}from"./index-Dgxh61n_.js";const c=`### C# at Universy
+import{d as a,m as o,c as r,a as e,n as s,u as n,F as i,o as m,e as l}from"./index-Cp0HZJou.js";const c=`### C# at Universy
 
 C# is the first progamming language I learnt at university. I ended up using C# for the vast majority of my university assignments
 

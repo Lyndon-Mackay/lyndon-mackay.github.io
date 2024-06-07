@@ -1,0 +1,111 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="635pt" height="488pt" viewBox="0.00 0.00 634.54 488.00">
+<g id="graph0" class="graph" transform="translate(4,484) scale(1)" data-name="G">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-484 630.54,-484 630.54,4 -4,4" style=""/>
+<!-- Start -->
+<g id="node1" class="node" pointer-events="visible" data-name="Start">
+
+<ellipse fill="yellowgreen" stroke="yellowgreen" cx="191.21" cy="-462" rx="77.62" ry="18" style=""/>
+<text text-anchor="middle" x="191.21" y="-457.8" font-family="Times,serif" font-size="14.00" style="">Honeycomb base</text>
+</g>
+<!-- Stiles -->
+<g id="node2" class="node" pointer-events="visible" data-name="Stiles">
+
+<ellipse fill="yellowgreen" stroke="yellowgreen" cx="191.21" cy="-373.2" rx="60.82" ry="18" style=""/>
+<text text-anchor="middle" x="191.21" y="-369" font-family="Times,serif" font-size="14.00" style="">Stiles Added</text>
+</g>
+<!-- Start&#45;&gt;Stiles -->
+<g id="edge1" class="edge" data-name="Start-&gt;Stiles">
+
+<path fill="none" stroke="black" d="M191.21,-443.85C191.21,-432.16 191.21,-416.39 191.21,-402.82" style=""/>
+<polygon fill="black" stroke="black" points="194.71,-403.12 191.21,-393.12 187.71,-403.12 194.71,-403.12" style=""/>
+<text text-anchor="middle" x="283.36" y="-413.4" font-family="Times,serif" font-size="14.00" style="">Staple Stiles to Honeycomb base</text>
+</g>
+<!-- Rails -->
+<g id="node3" class="node" pointer-events="visible" data-name="Rails">
+
+<ellipse fill="yellowgreen" stroke="yellowgreen" cx="191.21" cy="-284.4" rx="56.22" ry="18" style=""/>
+<text text-anchor="middle" x="191.21" y="-280.2" font-family="Times,serif" font-size="14.00" style="">Rails added</text>
+</g>
+<!-- Stiles&#45;&gt;Rails -->
+<g id="edge2" class="edge" data-name="Stiles-&gt;Rails">
+
+<path fill="none" stroke="black" d="M191.21,-355.05C191.21,-343.36 191.21,-327.59 191.21,-314.02" style=""/>
+<polygon fill="black" stroke="black" points="194.71,-314.32 191.21,-304.32 187.71,-314.32 194.71,-314.32" style=""/>
+<text text-anchor="middle" x="279.86" y="-324.6" font-family="Times,serif" font-size="14.00" style="">Stable rails to Honeycomb base</text>
+</g>
+<!-- GlassFrame -->
+<g id="node4" class="node" pointer-events="visible" data-name="GlassFrame">
+
+<polygon fill="yellowgreen" stroke="yellowgreen" points="81.21,-213.6 -0.21,-195.6 81.21,-177.6 162.64,-195.6 81.21,-213.6" style=""/>
+<text text-anchor="middle" x="81.21" y="-191.4" font-family="Times,serif" font-size="14.00" style="">Glass frame</text>
+</g>
+<!-- Rails&#45;&gt;GlassFrame -->
+<g id="edge3" class="edge" data-name="Rails-&gt;GlassFrame">
+
+<path fill="none" stroke="black" d="M143.18,-274.71C126.62,-269.55 109.18,-261.36 96.97,-248.4 90.86,-241.91 87.11,-233.11 84.82,-224.61" style=""/>
+<polygon fill="black" stroke="black" points="88.27,-224.01 82.81,-214.93 81.41,-225.44 88.27,-224.01" style=""/>
+<text text-anchor="middle" x="186.83" y="-235.8" font-family="Times,serif" font-size="14.00" style="">Add support for glass (if added)</text>
+</g>
+<!-- Base -->
+<g id="node6" class="node" pointer-events="visible" data-name="Base">
+
+<ellipse fill="yellowgreen" stroke="yellowgreen" cx="290.21" cy="-106.8" rx="29.62" ry="18" style=""/>
+<text text-anchor="middle" x="290.21" y="-102.6" font-family="Times,serif" font-size="14.00" style="">Base</text>
+</g>
+<!-- Rails&#45;&gt;Base -->
+<g id="edge4" class="edge" data-name="Rails-&gt;Base">
+
+<path fill="none" stroke="black" d="M238.16,-274.04C252.53,-268.85 266.97,-260.82 276.21,-248.4 300.39,-215.91 299.2,-166.86 295.32,-136.11" style=""/>
+<polygon fill="black" stroke="black" points="298.81,-135.8 293.9,-126.41 291.88,-136.82 298.81,-135.8" style=""/>
+<text text-anchor="middle" x="397.75" y="-191.4" font-family="Times,serif" font-size="14.00" style="">Add lock block to hold door handle</text>
+</g>
+<!-- GlassFrame&#45;&gt;Base -->
+<g id="edge5" class="edge" data-name="GlassFrame-&gt;Base">
+
+<path fill="none" stroke="black" d="M74.57,-178.74C71.01,-167.43 68.84,-152.56 77.14,-142.8 98.77,-117.32 193.65,-110.36 249.23,-108.47" style=""/>
+<polygon fill="black" stroke="black" points="249.05,-111.98 258.95,-108.19 248.85,-104.98 249.05,-111.98" style=""/>
+<text text-anchor="middle" x="176.75" y="-147" font-family="Times,serif" font-size="14.00" style="">Add lock block to hold door handle</text>
+</g>
+<!-- Skins -->
+<g id="node5" class="node" pointer-events="visible" data-name="Skins">
+
+<ellipse fill="yellowgreen" stroke="yellowgreen" cx="540.21" cy="-195.6" rx="32.51" ry="18" style=""/>
+<text text-anchor="middle" x="540.21" y="-191.4" font-family="Times,serif" font-size="14.00" style="">Skins</text>
+</g>
+<!-- Skins&#45;&gt;Base -->
+<g id="edge7" class="edge" data-name="Skins-&gt;Base">
+
+<path fill="none" stroke="black" d="M513.4,-184.82C506.8,-182.44 499.76,-179.91 493.21,-177.6 434.9,-157.03 366.91,-133.81 326.28,-120.01" style=""/>
+<polygon fill="black" stroke="black" points="327.6,-116.76 317.01,-116.86 325.35,-123.39 327.6,-116.76" style=""/>
+<text text-anchor="middle" x="504.9" y="-147" font-family="Times,serif" font-size="14.00" style="">press skins against door</text>
+</g>
+<!-- AddedVal -->
+<g id="node8" class="node" pointer-events="visible" data-name="AddedVal">
+
+<ellipse fill="yellowgreen" stroke="yellowgreen" cx="290.21" cy="-18" rx="97.27" ry="18" style=""/>
+<text text-anchor="middle" x="290.21" y="-13.8" font-family="Times,serif" font-size="14.00" style="">Added Value Variants</text>
+</g>
+<!-- Base&#45;&gt;AddedVal -->
+<g id="edge8" class="edge" data-name="Base-&gt;AddedVal">
+
+<path fill="none" stroke="black" d="M290.21,-88.65C290.21,-76.96 290.21,-61.19 290.21,-47.62" style=""/>
+<polygon fill="black" stroke="black" points="293.71,-47.92 290.21,-37.92 286.71,-47.92 293.71,-47.92" style=""/>
+<text text-anchor="middle" x="354.37" y="-58.2" font-family="Times,serif" font-size="14.00" style="">various other additions</text>
+</g>
+<!-- Routing -->
+<g id="node7" class="node" pointer-events="visible" data-name="Routing">
+
+<ellipse fill="yellowgreen" stroke="yellowgreen" cx="540.21" cy="-284.4" rx="42.32" ry="18" style=""/>
+<text text-anchor="middle" x="540.21" y="-280.2" font-family="Times,serif" font-size="14.00" style="">Routing</text>
+</g>
+<!-- Routing&#45;&gt;Skins -->
+<g id="edge6" class="edge" data-name="Routing-&gt;Skins">
+
+<path fill="none" stroke="black" d="M540.21,-266.25C540.21,-254.56 540.21,-238.79 540.21,-225.22" style=""/>
+<polygon fill="black" stroke="black" points="543.71,-225.52 540.21,-215.52 536.71,-225.52 543.71,-225.52" style=""/>
+<text text-anchor="middle" x="583.38" y="-235.8" font-family="Times,serif" font-size="14.00" style="">Route the skins</text>
+</g>
+</g>
+</svg>
