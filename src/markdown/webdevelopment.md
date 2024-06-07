@@ -5,6 +5,7 @@ As part of diversifying my skillset I learnt the vue framework, I have created t
 Some Vue concepts this website uses
 
 *   List rendering
+*   conditional rendering
 *   Binding styles
 *   Routing, 404 pages and redirect, meta fields and navigation guards
 *   State management with the user themes being saved, with Pinia
