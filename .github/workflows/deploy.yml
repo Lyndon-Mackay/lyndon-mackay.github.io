@@ -11,7 +11,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name: npm build
+        run: |
+           npm run build
       - name: Run git subtree push
         run: |
           git subtree push --prefix dist origin gh-pages
