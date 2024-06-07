@@ -48,7 +48,7 @@ function redirect() {
 </script>
 
 <template>
-  <h2> An area to make a custom theme</h2>
+  <h2 :style="elementColour('h2')"> An area to make a custom theme</h2>
   <form @submit.prevent="addTheme">
     <fieldset>
       <label for="textColorInput">Text colour</label>
