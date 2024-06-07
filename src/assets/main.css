@@ -85,7 +85,8 @@ h5,
 p,
 label,
 ul,
-li {
+li,
+pre {
   color: #ffc832
 }
 
