@@ -48,6 +48,10 @@ function resetRouterList(toName?: string) {
   routeAndStyleList.value = [];
 
   routeList.value.forEach((x) => {
+
+    if (x.meta.showLink != null && !x.meta.showLink) {
+      return
+    }
     const id = x.name?.toString() ?? "";
     if (id == "") {
       return;

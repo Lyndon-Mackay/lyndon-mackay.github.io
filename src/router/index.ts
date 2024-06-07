@@ -44,6 +44,12 @@ const routes = [
     component: () => import("../views/RegexView.vue"),
   },
   {
+    path: "/:notFound(.*)*",
+    name: "NotFound",
+    component: () => import("../views/NotfoundView.vue"),
+    meta: { showLink: false } /* stop from showing at top of the page */
+  },
+  {
     path: "/custom",
     name: "Custom",
     component: () => import("../views/CustomView.vue"),

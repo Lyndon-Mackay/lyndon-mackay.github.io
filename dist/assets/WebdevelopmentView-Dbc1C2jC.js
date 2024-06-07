@@ -1,4 +1,4 @@
-import{d as a,m as s,c as i,a as e,n as r,u as t,F as o,o as m,e as h}from"./index-Cp0HZJou.js";const u=`### This website is written using VueJs
+import{d as a,m as s,c as i,a as e,n as r,u as t,F as o,o as m,e as h}from"./index-F5Ri0wJs.js";const u=`### This website is written using VueJs
 
 As part of diversifying my skillset I learnt the vue framework, I have created this website as a playground for trying out various Vue and other web development practices
 
