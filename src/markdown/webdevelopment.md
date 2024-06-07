@@ -6,7 +6,7 @@ Some Vue concepts this website uses
 
 *   List rendering
 *   Binding styles
-*   Routing
+*   Routing, 404 pages and redirect
 *   State management with the user themes being saved, with Pinia
 *   Event handling
 *   Input bindings
