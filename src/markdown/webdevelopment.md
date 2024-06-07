@@ -10,7 +10,7 @@ Some Vue concepts this website uses
 *   State management with the user themes being saved, with Pinia
 *   Event handling
 *   Input bindings
-*   dynamic loading of markdown files and using this as content for most of my pages
+*   loading of markdown files and using this as content for most of my pages
 
 #### CSS
 
