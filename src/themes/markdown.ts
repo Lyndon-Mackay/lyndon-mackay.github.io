@@ -5,7 +5,9 @@ import { themeStore } from "../stores/themeStore";
 import { storeToRefs } from "pinia";
 import { marked } from 'marked'
 
-
+interface HasColour {
+  colour?: string
+}
 
 
 function themeChange() {
@@ -29,12 +31,16 @@ function elementChildrenStyle(el: HTMLElement) {
       elementChildrenStyle(element)
       const tag = element.tagName.toLowerCase()
 
+
+      const newElementColour = (elementColour(tag) as HasColour).colour
+
       //revert to CSS
-      if (elementColour(tag)?.color == undefined) {
+      if (newElementColour == undefined) {
         element.style.color = ""
+        return
       }
 
-      element.style.color = elementColour(tag)?.color
+      element.style.color = newElementColour
 
     }
   }
