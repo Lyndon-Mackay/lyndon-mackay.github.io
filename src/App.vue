@@ -22,6 +22,9 @@ const themeStoreInstance = themeStore();
 const { themes, currentTheme } = storeToRefs(themeStoreInstance);
 const themeListDisplay = ref(false);
 
+//To restore after preview has been selected
+const savedTheme = ref('')
+
 watch(currentTheme, () => {
   setTheme(currentTheme.value)
 });
@@ -97,15 +100,27 @@ router.afterEach((to) => {
     resetRouterList(to.name.toString())
   }
 });
+
+function previewTheme(name: string) {
+
+  savedTheme.value = currentTheme.value
+  setTheme(name)
+
+}
+
+function exitPreviewTheme() {
+  setTheme(savedTheme.value)
+}
 </script>
 
 <template>
   <div id="themeDiv">
-    <span id="theme" @click="toggleThemeDisplay" @mouseout="console.log('you left')">Theme</span>
+    <span id="theme" @click="toggleThemeDisplay">Theme</span>
     <ul class="themeList" v-show="themeListDisplay">
-      <li class="themeListItem" @click="setTheme('default')">Default</li>
+      <li class="themeListItem" @click="setTheme('default')" @mouseover="previewTheme('default')"
+        @mouseout="exitPreviewTheme()">Default</li>
       <li class="themeListItem" v-for="theme in themes" :key="theme.name" :id="'route-' + theme.name"
-        @click="setTheme(theme.name)">
+        @click="setTheme(theme.name)" @mouseover="previewTheme(theme.name)" @mouseout="exitPreviewTheme()">
         {{ theme.name }}
       </li>
       <li class="themeListItem">
