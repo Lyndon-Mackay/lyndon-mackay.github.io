@@ -90,6 +90,10 @@ pre {
   color: #ffc832
 }
 
+pre {
+  background-color: #3B454A
+}
+
 main {
   display: flex;
   flex-direction: column;

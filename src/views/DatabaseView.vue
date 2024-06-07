@@ -21,8 +21,8 @@ import { elementColour } from "../themes/index";
       ABL progress tends to handle application data as
       well.
     </p>
-    <h5 :style="elementColour('h5')">ABL progress</h5>
-    <pre>
+    <h5 :style="elementColour('h5')">ABL Progress Selecting Data</h5>
+    <pre :style="elementColour('pre')">
       /* ABL Progress code */
       DEFINE TEMP-TABLE ttOutput
       &#9DEFINE FIELD code LIKE warehouse.code
@@ -42,12 +42,50 @@ import { elementColour } from "../themes/index";
       &#9END.
       END.
     </pre>
-    <h5 :style="elementColour('h5')">SQL</h5>
-    <pre>
+    <h5 :style="elementColour('h5')">SQL Selecting data</h5>
+    <pre :style="elementColour('pre')">
       -- Equivalent SQL CODE
       SELECT warehouse.code item.item-no item.name item.num-in-stock
       FROM warehouse
       INNER JOIN item ON wareshouse.code = item.warehouse-code
+    </pre>
+
+
+    <h5 :style="elementColour('h5')">ABL Progress inserting data</h5>
+
+    <pre :style="elementColour('pre')">
+      CREATE Customer.
+      ASSIGN Customers.customerName = 'cardinal'
+      &#9Customers.City = 'stavanger'
+      &#9Customers.Country = 'Noway'.
+    </pre>
+    <h5 :style="elementColour('h5')">SQL inserting data</h5>
+    <pre :style="elementColour('pre')">
+      INSERT INTO Customers (CustomerName, City, Country)
+      VALUES ('Cardinal', 'Stavanger', 'Norway');
+    </pre>
+
+    <h5 :style="elementColour('h5')">ABL progress updating data</h5>
+    <pre :style="elementColour('pre')">
+      FIND Customers WHERE CustomerID EQ 1.
+      ASSIGN Customers.CustomerName = 'Alfred Schmidt'
+      &#9Customers.city = 'Frankfurt'.
+    </pre>
+    <h5 :style="elementColour('h5')">SQL updating data </h5>
+
+    <pre :style="elementColour('pre')">
+      UPDATE Customers
+      SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+      WHERE CustomerID = 1;
+    </pre>
+    <h5 :style="elementColour('pre')">ABL Progress delete data</h5>
+    <pre :style="elementColour('pre')">
+      FIND Customers WHERE customer.customerName EQ 'Alfreds Futterkiste'.
+      DELETE Customers
+    </pre>
+    <h5 :style="elementColour('pre')">SQL delete data</h5>
+    <pre :style="elementColour('pre')">
+      DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
     </pre>
   </article>
 
@@ -55,7 +93,7 @@ import { elementColour } from "../themes/index";
     <h3 :style="elementColour('h3')">SQL </h3>
     <p :style="elementColour('p')">I have used mySQL at university for my various assigments and had it interop with
       websites.
-      I have also used T-SQL as part of my database courses
+      I have also used T-SQL as part of my database courses.
     </p>
   </article>
 </template>
