@@ -1,0 +1,144 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="787pt" height="549pt" viewBox="0.00 0.00 787.31 548.6">
+<g id="graph0" class="graph" transform="translate(4,544.5999755859375) scale(1)" data-name="G">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-544.6 783.31,-544.6 783.31,4 -4,4"/>
+<!-- Customer -->
+<g id="node1" class="node" pointer-events="visible" data-name="Customer">
+
+<ellipse fill="gainsboro" stroke="gainsboro" cx="541.61" cy="-522.6" rx="102.48" ry="18"/>
+<text text-anchor="middle" x="541.61" y="-518.4" font-family="Times,serif" font-size="14.00">Customer with an order</text>
+</g>
+<!-- ItemEntry -->
+<g id="node2" class="node" pointer-events="visible" data-name="ItemEntry">
+
+<ellipse fill="gainsboro" stroke="gainsboro" cx="541.61" cy="-449.6" rx="81.06" ry="18"/>
+<text text-anchor="middle" x="541.61" y="-445.4" font-family="Times,serif" font-size="14.00">Item info is keyed</text>
+</g>
+<!-- Customer&#45;&gt;ItemEntry -->
+<g id="edge1" class="edge" data-name="Customer-&gt;ItemEntry">
+
+<path fill="none" stroke="rgb(0, 0, 255)" d="M541.61,-504.41C541.61,-496.83 541.61,-487.7 541.61,-479.14"/>
+<polygon fill="blue" stroke="blue" points="545.11,-479.14 541.61,-469.14 538.11,-479.14 545.11,-479.14"/>
+</g>
+<!-- Components -->
+<g id="node4" class="node" pointer-events="visible" data-name="Components">
+
+<ellipse fill="rgb(173, 216, 230)" stroke="rgb(173, 216, 230)" cx="323.61" cy="-376.6" rx="99.6" ry="18"/>
+<text text-anchor="middle" x="323.61" y="-372.4" font-family="Times,serif" font-size="14.00">Components generated</text>
+</g>
+<!-- ItemEntry&#45;&gt;Components -->
+<g id="edge2" class="edge" data-name="ItemEntry-&gt;Components">
+
+<path fill="none" stroke="rgb(0, 0, 255)" d="M497.23,-434.15C463.83,-423.27 417.77,-408.27 381.49,-396.45"/>
+<polygon fill="blue" stroke="blue" points="382.59,-393.13 372,-393.36 380.43,-399.79 382.59,-393.13"/>
+</g>
+<!-- Creation -->
+<g id="node3" class="node" pointer-events="visible" data-name="Creation">
+
+<ellipse fill="rgb(173, 216, 230)" stroke="rgb(173, 216, 230)" cx="323.61" cy="-303.6" rx="80.46" ry="18"/>
+<text text-anchor="middle" x="323.61" y="-299.4" font-family="Times,serif" font-size="14.00">ERP Creates Item</text>
+</g>
+<!-- Validation -->
+<g id="node5" class="node" pointer-events="visible" data-name="Validation">
+
+<ellipse fill="rgb(173, 216, 230)" stroke="rgb(173, 216, 230)" cx="323.61" cy="-214.8" rx="165.54" ry="18"/>
+<text text-anchor="middle" x="323.61" y="-210.6" font-family="Times,serif" font-size="14.00">Dimensions of the product are validated</text>
+</g><g id="edge8" class="edge" data-name="ItemEntry-&gt;ProposedComponents" data-comment="Validation">
+
+<path fill="none" stroke="orange" d="M541.61,-431.41C541.61,-423.83 541.61,-414.7 541.61,-406.14"/>
+<polygon fill="orange" stroke="orange" points="545.11,-406.14 541.61,-396.14 538.11,-406.14 545.11,-406.14"/>
+</g>
+<!-- Creation&#45;&gt;Validation -->
+<g id="edge4" class="edge" data-name="Creation-&gt;Validation">
+
+<path fill="none" stroke="rgb(0, 0, 255)" d="M323.61,-285.45C323.61,-273.76 323.61,-257.99 323.61,-244.42"/>
+<polygon fill="blue" stroke="blue" points="327.11,-244.72 323.61,-234.72 320.11,-244.72 327.11,-244.72"/>
+</g>
+<!-- Components&#45;&gt;Creation -->
+<g id="edge3" class="edge" data-name="Components-&gt;Creation">
+
+<path fill="none" stroke="rgb(0, 0, 255)" d="M323.61,-358.41C323.61,-350.83 323.61,-341.7 323.61,-333.14"/>
+<polygon fill="blue" stroke="blue" points="327.11,-333.14 323.61,-323.14 320.11,-333.14 327.11,-333.14"/>
+</g>
+<!-- ERPready -->
+<g id="node7" class="node" pointer-events="visible" data-name="ERPready">
+
+<ellipse fill="rgb(173, 216, 230)" stroke="rgb(173, 216, 230)" cx="468.61" cy="-18" rx="164.41" ry="18"/>
+<text text-anchor="middle" x="468.61" y="-13.8" font-family="Times,serif" font-size="14.00">Item is ready to be used by ERP system</text>
+</g>
+<!-- Validation&#45;&gt;ERPready -->
+<!-- Validation&#45;&gt;ERPready -->
+<g id="edge7" class="edge" data-name="Validation-&gt;ERPready">
+
+<path fill="none" stroke="rgb(0, 0, 255)" d="M399.47,-198.39C409.98,-193.55 419.83,-187.17 427.61,-178.8 461.09,-142.76 468.1,-83.15 469.09,-47.82"/>
+<polygon fill="blue" stroke="blue" points="472.59,-47.97 469.2,-37.93 465.59,-47.89 472.59,-47.97"/>
+<text text-anchor="middle" x="515.57" y="-102.6" font-family="Times,serif" font-size="14.00">If product is valid</text>
+</g>
+<!-- Pr -->
+<g id="edge5" class="edge" data-name="Validation-&gt;Warning" data-comment="Pr">
+
+<path fill="none" stroke="rgb(0, 0, 255)" d="M304.71,-196.53C285.75,-179.21 256.36,-152.35 234.88,-132.72"/>
+<polygon fill="blue" stroke="blue" points="237.36,-130.24 227.61,-126.08 232.63,-135.41 237.36,-130.24"/>
+<text text-anchor="middle" x="353.4" y="-156.6" font-family="Times,serif" font-size="14.00">If dimensions are invalid</text>
+</g>
+<g id="node9" class="node" pointer-events="visible" data-name="ProposedValidation" data-comment="Pr">
+
+<ellipse fill="rgb(255, 165, 0)" stroke="rgb(255, 165, 0)" cx="596.61" cy="-303.6" rx="165.54" ry="18"/>
+<text text-anchor="middle" x="596.61" y="-299.4" font-family="Times,serif" font-size="14.00">Dimensions of the product are validated</text>
+</g>
+<!-- i -->
+<!-- ProposedValidation&#45;&gt;ItemEntry -->
+<!-- ProposedValidation&#45;&gt;ItemEntry -->
+<!-- ProposedValidation&#45;&gt;ItemEntry -->
+<g id="node6" class="node" pointer-events="visible" data-name="Warning" data-comment="ProposedValidation-&gt;ItemEntry">
+
+<ellipse fill="rgb(173, 216, 230)" stroke="rgb(173, 216, 230)" cx="207.61" cy="-106.8" rx="207.72" ry="18"/>
+<text text-anchor="middle" x="207.61" y="-102.6" font-family="Times,serif" font-size="14.00">User is warned but message can be missed/ignored</text>
+</g>
+
+<g id="edge6" class="edge" data-name="Warning-&gt;ERPready" data-comment="ProposedValidation-&gt;ItemEntry">
+
+<path fill="none" stroke="rgb(0, 0, 255)" d="M194.47,-88.68C187.71,-77.65 182.48,-63.63 190.98,-54 200.38,-43.34 259.15,-35.12 320.21,-29.33"/>
+<polygon fill="blue" stroke="blue" points="320.48,-32.82 330.12,-28.41 319.84,-25.85 320.48,-32.82"/>
+<text text-anchor="middle" x="323.42" y="-58.2" font-family="Times,serif" font-size="14.00">Can be ignored and item is valid within system</text>
+</g>
+
+<!-- P -->
+<g id="node8" class="node" pointer-events="visible" data-name="ProposedComponents" data-comment="P">
+
+<ellipse fill="rgb(255, 165, 0)" stroke="rgb(255, 165, 0)" cx="541.61" cy="-376.6" rx="99.6" ry="18"/>
+<text text-anchor="middle" x="541.61" y="-372.4" font-family="Times,serif" font-size="14.00">Components generated</text>
+</g><g id="edge9" class="edge" data-name="ProposedComponents-&gt;ProposedValidation" data-comment="P">
+
+<path fill="none" stroke="orange" d="M554.92,-358.41C561.41,-350.04 569.34,-339.8 576.54,-330.5"/>
+<polygon fill="orange" stroke="orange" points="579.13,-332.87 582.49,-322.83 573.6,-328.59 579.13,-332.87"/>
+</g>
+<!-- i -->
+<g id="edge10" class="edge" data-name="ProposedValidation-&gt;ItemEntry" data-comment="i">
+
+<path fill="none" stroke="rgb(255, 165, 0)" d="M620.98,-321.68C632.27,-331.12 644.52,-343.9 650.61,-358.6 656.73,-373.38 659.04,-381.01 650.61,-394.6 640.18,-411.4 622.8,-423.13 604.95,-431.26"/>
+<polygon fill="orange" stroke="orange" points="603.72,-427.98 595.83,-435.06 606.41,-434.45 603.72,-427.98"/>
+<text text-anchor="middle" x="708.31" y="-372.4" font-family="Times,serif" font-size="14.00">Rejected if invalid</text>
+</g>
+<!-- P -->
+<!-- ProposedValidation&#45;&gt;p -->
+<g id="edge11" class="edge" data-name="ProposedValidation-&gt;PropoosedERP" data-comment="ProposedValidation-&gt;p">
+
+<path fill="none" stroke="rgb(255, 165, 0)" d="M596.61,-285.34C596.61,-261.69 596.61,-218.92 596.61,-190.44"/>
+<polygon fill="orange" stroke="orange" points="600.11,-190.72 596.61,-180.72 593.11,-190.72 600.11,-190.72"/>
+<text text-anchor="middle" x="687.96" y="-255" font-family="Times,serif" font-size="14.00">If valid then item will be created</text>
+</g>
+<g id="node10" class="node" pointer-events="visible" data-name="PropoosedERP" data-comment="ProposedValidation-&gt;p">
+
+<ellipse fill="rgb(255, 165, 0)" stroke="rgb(255, 165, 0)" cx="596.61" cy="-160.8" rx="80.46" ry="18"/>
+<text text-anchor="middle" x="596.61" y="-156.6" font-family="Times,serif" font-size="14.00">ERP Creates Item</text>
+</g>
+<!-- ProposedValid -->
+<g id="edge12" class="edge" data-name="PropoosedERP-&gt;ERPready" data-comment="ProposedValid">
+
+<path fill="none" stroke="rgb(255, 165, 0)" d="M594.01,-142.55C590.99,-127.18 584.78,-104.72 572.61,-88.8 557.58,-69.15 535.37,-53.18 515.32,-41.5"/>
+<polygon fill="orange" stroke="orange" points="517.15,-38.51 506.72,-36.68 513.74,-44.62 517.15,-38.51"/>
+</g>
+</g>
+</svg>

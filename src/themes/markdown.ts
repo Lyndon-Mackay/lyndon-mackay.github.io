@@ -10,7 +10,7 @@ import { marked } from 'marked'
 
 function themeChange() {
   const contents = document.querySelector("#contents")
-  if (contents == null) {
+  if (contents == null || !(contents instanceof HTMLElement)) {
     return
   }
 
@@ -18,17 +18,19 @@ function themeChange() {
 
 }
 
-function elementChildrenStyle(el: Element) {
+function elementChildrenStyle(el: HTMLElement) {
 
   for (let index = 0; index < el.children.length; index++) {
 
     const element = el.children[index];
 
-    elementChildrenStyle(element)
-    const tag = element.tagName.toLowerCase()
+    if (element instanceof HTMLElement) {
+      elementChildrenStyle(element)
+      const tag = element.tagName.toLowerCase()
 
 
-    element.style.color = elementColour(tag).color
+      element.style.color = elementColour(tag)?.color
+    }
   }
 }
 
