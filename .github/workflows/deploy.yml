@@ -17,6 +17,9 @@ jobs:
       - name: npm build
         run: |
            npm run build
+      - name: create dist
+        run: |
+            git add dist
       - name: Run git subtree push
         run: |
           git subtree push --prefix dist origin gh-pages
