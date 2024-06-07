@@ -9,6 +9,7 @@ import { marked } from 'marked'
 
 
 function themeChange() {
+
   const contents = document.querySelector("#contents")
   if (contents == null || !(contents instanceof HTMLElement)) {
     return
@@ -28,8 +29,13 @@ function elementChildrenStyle(el: HTMLElement) {
       elementChildrenStyle(element)
       const tag = element.tagName.toLowerCase()
 
+      //revert to CSS
+      if (elementColour(tag)?.color == undefined) {
+        element.style.color = ""
+      }
 
       element.style.color = elementColour(tag)?.color
+
     }
   }
 }
@@ -44,10 +50,7 @@ export const markDownInstance = (mk: string) => {
   const watchHandle = watch(currentTheme, () => {
     themeChange()
   });
-  onMounted(() => {
-    themeChange()
-  }
-  )
+  const mark = marked(mk)
   return { mkd: ref(marked(mk)), watcher: watchHandle }
 }
 
