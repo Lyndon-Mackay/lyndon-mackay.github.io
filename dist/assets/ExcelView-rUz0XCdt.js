@@ -1,4 +1,4 @@
-import{d as o,m as a,c as s,a as e,n as i,u as n,F as r,o as c,e as d}from"./index-BSn_o1d5.js";const h=`### Linking Vendor data with ERP data
+import{d as o,m as a,c as s,a as e,n as i,u as n,F as r,o as c,e as d}from"./index-C3eU69l-.js";const h=`### Linking Vendor data with ERP data
 
 Two common scenarios have occured when vendors had changes we needed to address in our ERP system
 

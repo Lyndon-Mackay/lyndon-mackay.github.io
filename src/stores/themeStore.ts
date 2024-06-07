@@ -78,7 +78,7 @@ export const themeStore = defineStore("theme", () => {
   ) {
     themes.value.push({
       name: name,
-      background: "#000000",
+      background: "#000000", /* background not chanagable */
       text: textColour,
       link: linkColour,
       linkActive: LinkActiveColour,
