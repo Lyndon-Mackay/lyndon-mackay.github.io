@@ -1,4 +1,4 @@
-import{d as o,m as r,c as t,a as e,n as s,u as n,F as l,o as i,e as c}from"./index-Ch_lR3vu.js";const d=`### Scanning through user presentable data
+import{d as o,m as r,c as t,a as e,n as s,u as n,F as l,o as i,e as c}from"./index-Dq4iUWJt.js";const d=`### Scanning through user presentable data
 
 When users submit errors in their reports it can be located alongside some data in a consistent form but constantly changing in very large reports where you have a replicable source of errors a regular expression can be useful for jumping to the next error or helping confirm a solutions solves multiple errors
 
