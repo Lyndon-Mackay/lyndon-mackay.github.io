@@ -1,4 +1,4 @@
-import{d as t,m as o,c as r,a as e,n as s,u as n,F as i,o as d,e as l}from"./index-BSn_o1d5.js";const m=`### Formatter for the Abl Progress language
+import{d as t,m as o,c as r,a as e,n as s,u as n,F as i,o as d,e as l}from"./index-C3eU69l-.js";const m=`### Formatter for the Abl Progress language
 
 Currently the ABL Progress langauge does not have a formatter. I noticed that most of our large programs had incosistent indenting
 ,which made tracking branching code and procedures(functions) difficult. 
