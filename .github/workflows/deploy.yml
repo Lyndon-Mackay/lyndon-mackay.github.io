@@ -20,6 +20,9 @@ jobs:
       - name: create dist
         run: |
             git add dist
+      - name: build
+        run: |
+         git commit am "buid changes from main"
       - name: Run git subtree push
         run: |
           git subtree push --prefix dist origin gh-pages
