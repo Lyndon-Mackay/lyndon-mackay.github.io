@@ -42,13 +42,19 @@ body {
   display: unset;
 }
 
-.themeList {
-
-  padding-left: 20px;
-  display: inline-grid;
-
+.themeListItem:hover {
+  box-shadow: aliceblue 0px 0px 10px 10px;
 }
 
+.themeList {
+  padding-left: 20px;
+  display: inline-grid;
+}
+
+
+#theme:hover {
+  box-shadow: aliceblue 0px 0px 10px 10px;
+}
 
 nav {
   color: #b82601;
@@ -62,7 +68,8 @@ a {
 }
 
 a:hover {
-  color: #813772;
+  color: aquamarine;
+  box-shadow: aliceblue 0px 0px 10px 10px;
 }
 
 h1 {
