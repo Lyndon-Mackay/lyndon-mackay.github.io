@@ -75,17 +75,15 @@ Bachelor's degree in Computer and Mathematical Sciences
 ### Experience
 
 An experienced programmer especially in the context of maintaining an ERP system.<br>
-I have programmed in many programming languages including C#, F#, Java, Rust, Javascript, Haskell.<br>
-knowledgable about business operations in a construction and warehousing context.<br>
+I have programmed in many languages including C#, F#, Java, Rust, Javascript, Haskell and I am knowledgeable about business operations in a construction and warehousing context.<br>
 
 ### Qualities 
 
 
-I am strongly driven to make systems as easy to use for the user as possible I constantly ask myself at everystep
-in the interaction if the user is getting value from it.<br>
-From a programming standpoint I like using data types in a way to architect code as neatly as I can my favourate
-adage in regards to programming is "Make illegal states unrepresentable"<br>
-Of course strict deadlines may not make this possible but I have a habit of returning to make improvements
+I am strongly driven to make systems as easy to use as possible. I constantly ask myself at every step in the interaction if the user is getting value from it.<br>
+From a programming standpoint I like using data types in a way to architect code as neatly as I can.  My favourite adage in regards to programming is "Make illegal states unrepresentable"<br>
+Of course strict deadlines may not make this possible but I have a habit of returning to make improvements.
 
 
-`,Hf=["innerHTML"],Bf=Zn({__name:"HomeView",setup(e){const t=jf(Nf).mkd;return(n,s)=>(Pt(),Wt(Te,null,[pe("h2",{style:yt(Fe($t)("h2"))}," A CV in website form",4),pe("article",{id:"contents",innerHTML:Fe(t)},null,8,Hf)],64))}}),Df=[{path:"/",name:"Home",component:Bf},{path:"/rust",name:"Rust",component:()=>Ve(()=>import("./RustView-DdPY-4wF.js"),[])},{path:"/csharp",name:"Csharp",component:()=>Ve(()=>import("./CsharpView-BNZFKqRK.js"),[])},{path:"/database",name:"Database",component:()=>Ve(()=>import("./DatabaseView-CF6XxZxw.js"),[])},{path:"/web",name:"Web",component:()=>Ve(()=>import("./WebdevelopmentView-K-15D4md.js"),[])},{path:"/construction",name:"Construction",component:()=>Ve(()=>import("./ConstructionView-Ch0hWfzC.js"),[])},{path:"/communication",name:"Communication",component:()=>Ve(()=>import("./CommunicationView-DIlqZqcM.js"),[])},{path:"/excel",name:"Excel",component:()=>Ve(()=>import("./ExcelView-DAJ1aCBF.js"),[])},{path:"/regex",name:"Regular_Epressions",component:()=>Ve(()=>import("./RegexView-Wc3XWuU9.js"),[])},{path:"/:notFound(.*)*",name:"NotFound",component:()=>Ve(()=>import("./NotfoundView-DvdkLKYZ.js"),[]),meta:{showLink:!1}},{path:"/custom",name:"Custom",component:()=>Ve(()=>import("./CustomView-DwEc_yc9.js"),[])}],Vf=Da({history:ba(),routes:Df});Tu(Xa).use($u()).use(Vf).mount("#app");export{Te as F,pe as a,In as b,Wt as c,Zn as d,$t as e,qf as f,ds as g,yr as h,Ua as i,jf as m,yt as n,Pt as o,Oe as r,ns as t,Fe as u,Kf as v,as as w};
+
+`,Hf=["innerHTML"],Bf=Zn({__name:"HomeView",setup(e){const t=jf(Nf).mkd;return(n,s)=>(Pt(),Wt(Te,null,[pe("h2",{style:yt(Fe($t)("h2"))}," A CV in website form",4),pe("article",{id:"contents",innerHTML:Fe(t)},null,8,Hf)],64))}}),Df=[{path:"/",name:"Home",component:Bf},{path:"/rust",name:"Rust",component:()=>Ve(()=>import("./RustView-D1S9uHn-.js"),[])},{path:"/csharp",name:"Csharp",component:()=>Ve(()=>import("./CsharpView-Cl95dHEo.js"),[])},{path:"/database",name:"Database",component:()=>Ve(()=>import("./DatabaseView-DwFarHAa.js"),[])},{path:"/web",name:"Web",component:()=>Ve(()=>import("./WebdevelopmentView-CU7uhd6d.js"),[])},{path:"/construction",name:"Construction",component:()=>Ve(()=>import("./ConstructionView-CFRRHDLR.js"),[])},{path:"/communication",name:"Communication",component:()=>Ve(()=>import("./CommunicationView-CYpycngA.js"),[])},{path:"/excel",name:"Excel",component:()=>Ve(()=>import("./ExcelView-CZ05SuaU.js"),[])},{path:"/regex",name:"Regular_Epressions",component:()=>Ve(()=>import("./RegexView-B0BzfT2p.js"),[])},{path:"/:notFound(.*)*",name:"NotFound",component:()=>Ve(()=>import("./NotfoundView-C7SP9MtS.js"),[]),meta:{showLink:!1}},{path:"/custom",name:"Custom",component:()=>Ve(()=>import("./CustomView-CUEh1qMZ.js"),[])}],Vf=Da({history:ba(),routes:Df});Tu(Xa).use($u()).use(Vf).mount("#app");export{Te as F,pe as a,In as b,Wt as c,Zn as d,$t as e,qf as f,ds as g,yr as h,Ua as i,jf as m,yt as n,Pt as o,Oe as r,ns as t,Fe as u,Kf as v,as as w};
