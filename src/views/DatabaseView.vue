@@ -21,6 +21,7 @@ import { elementColour } from "../themes/index";
       ABL progress tends to handle application data as
       well.
     </p>
+    <hr>
     <h5 :style="elementColour('h5')">ABL Progress Selecting Data</h5>
     <pre :style="elementColour('pre')">
       /* ABL Progress code */
@@ -51,6 +52,7 @@ import { elementColour } from "../themes/index";
     </pre>
 
 
+    <hr>
     <h5 :style="elementColour('h5')">ABL Progress inserting data</h5>
 
     <pre :style="elementColour('pre')">
@@ -64,6 +66,7 @@ import { elementColour } from "../themes/index";
       INSERT INTO Customers (CustomerName, City, Country)
       VALUES ('Cardinal', 'Stavanger', 'Norway');
     </pre>
+    <hr>
 
     <h5 :style="elementColour('h5')">ABL progress updating data</h5>
     <pre :style="elementColour('pre')">
@@ -78,6 +81,7 @@ import { elementColour } from "../themes/index";
       SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
       WHERE CustomerID = 1;
     </pre>
+    <hr>
     <h5 :style="elementColour('pre')">ABL Progress delete data</h5>
     <pre :style="elementColour('pre')">
       FIND Customers WHERE customer.customerName EQ 'Alfreds Futterkiste'.
@@ -87,6 +91,7 @@ import { elementColour } from "../themes/index";
     <pre :style="elementColour('pre')">
       DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
     </pre>
+    <hr>
   </article>
 
   <article>
