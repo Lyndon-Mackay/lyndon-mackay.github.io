@@ -102,6 +102,12 @@ img {
   height: auto;
 }
 
+button:hover,
+input:hover {
+
+  box-shadow: aliceblue 0px 0px 10px 10px;
+}
+
 pre {
   background-color: #3B454A;
   overflow-x: scroll;
