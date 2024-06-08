@@ -136,7 +136,7 @@ function themeAssigned(name: string) {
 
 <template>
   <div id="themeDiv">
-    <span id="theme" @click="toggleThemeDisplay">Theme</span>
+    <span id="theme" @click="toggleThemeDisplay">Theme <span v-show="!themeListDisplay">➢</span><span v-show="themeListDisplay" >⮛</span> </span>
     <ul class="themeList" v-show="themeListDisplay">
       <li class="themeListItem" @click="themeAssigned('default')" @mouseover="previewTheme('default')"
         @mouseout="exitPreviewTheme()">Default</li>
