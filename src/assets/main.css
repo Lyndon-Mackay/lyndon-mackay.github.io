@@ -91,7 +91,9 @@ pre {
 }
 
 pre {
-  background-color: #3B454A
+  background-color: #3B454A;
+  width: fit-content;
+  padding-right: 10px;
 }
 
 main {
@@ -109,7 +111,7 @@ span {
   color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   .mobile-dropdown-content:not(.router-link-active) {
     display: none;
     z-index: 1;
