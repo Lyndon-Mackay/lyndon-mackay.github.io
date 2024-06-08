@@ -7,7 +7,7 @@ export const themeStore = defineStore("theme", () => {
 
   interface Theme {
     name: string;
-    background: string;
+    background: string;// incase I add dynamic background
     text: string;
     link: string;
     linkActive: string;
@@ -16,17 +16,9 @@ export const themeStore = defineStore("theme", () => {
 
   const themes: Ref<Theme[]> = ref([]);
 
-  const water: Theme = {
-    name: "Water",
-    background: "#083CSD",
-    text: "#328CC1",
-    link: "#D9B310",
-    linkActive: "#FFFFFF",
-  };
-  themes.value.push(water);
-
   const currentTheme = ref("default");
 
+  initialThemes()
   function setCurrentTheme(newThemeName: string) {
     currentTheme.value = newThemeName;
     themeIndex.value = themes.value.findIndex((x) => x.name == newThemeName);
@@ -68,6 +60,28 @@ export const themeStore = defineStore("theme", () => {
 
     const theme = themes.value[themeIndex.value];
     return { color: theme.linkActive };
+  }
+
+  function initialThemes() {
+
+    const water: Theme = {
+      name: "Water",
+      background: "#083CSD",
+      text: "#328CC1",
+      link: "#D9B310",
+      linkActive: "#FFFFFF",
+    };
+    themes.value.push(water);
+
+    const roy: Theme = {
+      name: "ROY",
+      background: "#2a3439",
+      text: "red",
+      link: "orange",
+      linkActive: "Yellow"
+    }
+    themes.value.push(roy)
+
   }
 
   function addTheme(

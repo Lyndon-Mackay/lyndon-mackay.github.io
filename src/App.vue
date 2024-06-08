@@ -20,19 +20,24 @@ const routeAndStyleList: Ref<RouteStyle[]> = ref([]);
 
 const themeStoreInstance = themeStore();
 const { themes, currentTheme } = storeToRefs(themeStoreInstance);
+
+
 const themeListDisplay = ref(false);
 
 //To restore after preview has been selected
 const savedTheme = ref('')
 
+
 watch(currentTheme, () => {
   setTheme(currentTheme.value)
 });
 
+//Theme dropbox
 function toggleThemeDisplay() {
   themeListDisplay.value = !themeListDisplay.value;
 }
 
+//Saves the theme across all views and triggers rerender
 function setTheme(name: string) {
 
   themeStoreInstance.setCurrentTheme(name);
@@ -52,6 +57,7 @@ function resetRouterList(toName?: string) {
 
   routeList.value.forEach((x) => {
 
+    //links not to show such as 404 page
     if (x.meta.showLink != null && !x.meta.showLink) {
       return
     }
@@ -59,6 +65,7 @@ function resetRouterList(toName?: string) {
     if (id == "") {
       return;
     }
+    //No destination such as on home page
     if (toName == null) {
 
       routeAndStyleList.value.push({
@@ -74,6 +81,7 @@ function resetRouterList(toName?: string) {
       return;
     }
 
+    //Current page we are on gets special link styling
     if (toName == id) {
       routeAndStyleList.value.push({
         style: themeStoreInstance.getLinkActiveColour(),
@@ -101,15 +109,28 @@ router.afterEach((to) => {
   }
 });
 
+//Previews the theme without saving
 function previewTheme(name: string) {
 
-  savedTheme.value = currentTheme.value
+  if (savedTheme.value.length == 0) {
+    savedTheme.value = currentTheme.value
+  }
+
   setTheme(name)
 
 }
 
 function exitPreviewTheme() {
+
   setTheme(savedTheme.value)
+  savedTheme.value = ''
+
+}
+function themeAssigned(name: string) {
+
+  savedTheme.value = name //overwrite any previews
+  setTheme(name)
+
 }
 </script>
 
@@ -117,10 +138,10 @@ function exitPreviewTheme() {
   <div id="themeDiv">
     <span id="theme" @click="toggleThemeDisplay">Theme</span>
     <ul class="themeList" v-show="themeListDisplay">
-      <li class="themeListItem" @click="setTheme('default')" @mouseover="previewTheme('default')"
+      <li class="themeListItem" @click="themeAssigned('default')" @mouseover="previewTheme('default')"
         @mouseout="exitPreviewTheme()">Default</li>
       <li class="themeListItem" v-for="theme in themes" :key="theme.name" :id="'route-' + theme.name"
-        @click="setTheme(theme.name)" @mouseover="previewTheme(theme.name)" @mouseout="exitPreviewTheme()">
+        @click="themeAssigned(theme.name)" @mouseover="previewTheme(theme.name)" @mouseout="exitPreviewTheme()">
         {{ theme.name }}
       </li>
       <li class="themeListItem">
@@ -137,12 +158,17 @@ function exitPreviewTheme() {
     <nav class="mobile-dropdown">
       <RouterLink v-for="route in routeAndStyleList" :to="{ name: route.name }" :id="'route-' + route.name?.toString()"
         :key="route.name" :style="route.style" class="mobile-dropdown-content">{{ route.name }}</RouterLink>
+
     </nav>
 
     <main>
+
       <RouterView />
+
     </main>
   </div>
+
 </template>
+
 
 <style scoped></style>
