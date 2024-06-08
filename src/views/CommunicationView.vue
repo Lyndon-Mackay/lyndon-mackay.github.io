@@ -12,6 +12,7 @@ import { elementColour } from "../themes/index";
       I have also used this to confirm my understanding of domain knowledge such as the construction proccess of doors
       and leadtimes
     </p>
+    <hr>
     <h4 :style="elementColour('h4')">Explaining layout of a database system and how they are related</h4>
     <pre :style="elementColour('pre')">
       digraph G {
@@ -31,6 +32,7 @@ import { elementColour } from "../themes/index";
       }
     </pre>
     <img src="../assets/database.svg" alt="Output of layout graphviz" />
+    <hr>
 
     <h4 :style="elementColour('h4')">Recreation of a graph I used to confirm my understanding of how honeycomb doors are
       created</h4>
@@ -63,6 +65,7 @@ import { elementColour } from "../themes/index";
       }
     </pre>
     <img src="../assets/honeycomb.svg" alt="Output of honeycomb graphviz" />
+    <hr>
     <h4 :style="elementColour('h4')">Example of how I can explain my changes to a proccess in orange based of an example
       of retrofitting glass thickness validation in lots of copy and pasted code over a decade </h4>
     <pre style="elementColour('pre')">
@@ -101,5 +104,6 @@ import { elementColour } from "../themes/index";
       }
     </pre>
     <img src="../assets/erp.svg" alt="Output of ERP graphviz" />
+    <hr>
   </article>
 </template>
