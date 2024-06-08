@@ -11,3 +11,17 @@ export function elementColour(name: string): StyleValue {
   }
   return { color: result };
 }
+
+export function elementColourByTheme(elementName: string, themeName: string): StyleValue {
+
+  let themeStoreInstance = themeStore();
+  let result = themeStoreInstance.getColourForElementByTheme(elementName, themeName);
+
+
+  if (result == "") {
+    return {}
+  }
+
+  return { color: result }
+
+}

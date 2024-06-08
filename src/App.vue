@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { elementColour } from "./themes/index";
+import { elementColour, elementColourByTheme } from "./themes/index";
 
 import { themeStore } from "./stores/themeStore";
 import { ref, watch, type Ref, type StyleValue } from "vue";
@@ -140,8 +140,9 @@ function themeAssigned(name: string) {
     <ul class="themeList" v-show="themeListDisplay">
       <li class="themeListItem" @click="themeAssigned('default')" @mouseover="previewTheme('default')"
         @mouseout="exitPreviewTheme()">Default</li>
-      <li class="themeListItem" v-for="theme in themes" :key="theme.name" :id="'route-' + theme.name"
-        @click="themeAssigned(theme.name)" @mouseover="previewTheme(theme.name)" @mouseout="exitPreviewTheme()">
+      <li class="themeListItem" :style="elementColourByTheme('li', theme.name)" v-for="theme in themes"
+        :key="theme.name" :id="'route-' + theme.name" @click="themeAssigned(theme.name)"
+        @mouseover="previewTheme(theme.name)" @mouseout="exitPreviewTheme()">
         {{ theme.name }}
       </li>
       <li class="themeListItem">

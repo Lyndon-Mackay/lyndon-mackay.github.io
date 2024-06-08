@@ -48,9 +48,28 @@ export const themeStore = defineStore("theme", () => {
       return "";
     }
 
-    const color = theme[classification];
+    const colour = theme[classification];
 
-    return color;
+    return colour;
+  }
+
+  function getColourForElementByTheme(elementName: string, themeName: string) {
+    const theme = themes.value.find((x) =>
+      x.name == themeName
+    )
+    if (theme == null) {
+      return ""
+    }
+
+    const classification = classifyElement(elementName)
+
+    if (classification == null) {
+      return ""
+    }
+
+    const colour = theme[classification]
+
+    return colour
   }
 
   function getLinkActiveColour(): StyleValue {
@@ -107,6 +126,7 @@ export const themeStore = defineStore("theme", () => {
     currentTheme,
     setCurrentTheme,
     getColourForElement,
+    getColourForElementByTheme,
     getLinkActiveColour,
     addTheme,
   };
