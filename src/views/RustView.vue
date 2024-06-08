@@ -11,7 +11,7 @@ const mkd = markdown.markDownInstance(mk).mkd
 
 <template>
 
-  <h2 :style="elementColour('h2')">A selected list of Rust project I have done</h2>
+  <h2 :style="elementColour('h2')">A selected list of Rust projects I have completed</h2>
   <article id='contents' v-html="mkd">
   </article>
 </template>
