@@ -1,6 +1,6 @@
 A selected list of Rust projects I have completed
 
-### Formatter for the Abl Progress language
+### Formatter for the ABL Progress language
 Currently the ABL Progress language does not have a formatter. I noticed
 that most of our large programs had inconsistent indenting, which made
 tracking of branching code and procedures(functions) difficult.
@@ -18,8 +18,7 @@ thereby slowing down our changes.
 
 ### Ecology
 As part of learning the Rust programming language I attempted this challenge [On
-reddit](https://www.reddit.com/r/dailyprogrammer/comments/27h53e/662014_c
-hallenge_165_hard_simulated_ecology_the/)
+reddit](https://www.reddit.com/r/dailyprogrammer/comments/27h53e/662014_challenge_165_hard_simulated_ecology_the/)
 The task is to make a forest on a 2D array(chessboard
 like grid) and simulate the forest for 400 years.
 The short summary is.
