@@ -7,7 +7,7 @@ import { elementColour } from "../themes/index";
     <h3 :style="elementColour('h3')">Relational database</h3>
     <h4 :style="elementColour('h4')">ABL Progress</h4>
     <p :style="elementColour('p')">Abl progress is a relational database management system</p>
-    <p :style="elementColour('p')">I have used this progamming lanaguage for over 5 years</p>
+    <p :style="elementColour('p')">I have used this programming language for over five years</p>
     <ul>
       <li :style="elementColour('li')">Extracting data for stakeholders</li>
       <li :style="elementColour('li')">Creating new functionality </li>
@@ -96,9 +96,8 @@ import { elementColour } from "../themes/index";
 
   <article>
     <h3 :style="elementColour('h3')">SQL </h3>
-    <p :style="elementColour('p')">I have used mySQL at university for my various assigments and had it interop with
-      websites.
-      I have also used T-SQL as part of my database courses.
+    <p :style="elementColour('p')">
+      I have used my SQL at university for various assignments and had it interop with websites. I have also used T-SQL as part of my database courses
     </p>
   </article>
 </template>

@@ -9,8 +9,8 @@ import { elementColour } from "../themes/index";
     <p :style="elementColour('p')">
       Graphviz is a quick and effective way to communicate how programs work to both technical and non-technical
       stakeholders.
-      I have also used this to confirm my understanding of domain knowledge such as the construction proccess of doors
-      and leadtimes
+      I have also used this to confirm my understanding of domain knowledge such as the construction process of doors
+      and subsequent leadtimes.
     </p>
     <hr>
     <h4 :style="elementColour('h4')">Explaining layout of a database system and how they are related</h4>
@@ -66,9 +66,9 @@ import { elementColour } from "../themes/index";
     </pre>
     <img src="../assets/honeycomb.svg" alt="Output of honeycomb graphviz" />
     <hr>
-    <h4 :style="elementColour('h4')">Example of how I can explain my changes to a proccess in orange based of an example
+    <h4 :style="elementColour('h4')">Example of how I can explain my changes to a process in orange based of an example
       of retrofitting glass thickness validation in lots of copy and pasted code over a decade </h4>
-    <pre style="elementColour('pre')">
+    <pre :style="elementColour('pre')">
       digraph G {
 
       &#9node[style=filled,color=gainsboro]

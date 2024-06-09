@@ -1,37 +1,31 @@
-### Formatter for the Abl Progress language
+### Scanning through user presentable data
 
-Currently the ABL Progress language does not have a formatter. I noticed that most of our large programs had inconsistent indenting,
-,which made tracking branching code and procedures(functions) difficult. 
-After spending considerable time reformatting the code by hand to improve maintainability, 
-I looked at general purpose code formatters. None of them worked with ABL Progress.
+When users submit errors in their reports, the error can be located when compared alongside some data in a consistent form. 
 
-After coming across the Rust parsing framework [Pest](https://pest.rs/), I started implementing an MVP version of the formatter.
-Unfortunately the grammar of the progress language is not open source.
-I managed to recreate an approximate subset of the language that we tend to use.
+but constantly changing in very large reports   (? We don’t get it)
 
-This program, in combination with merging, helped improve the readability of programs that had for years been misaligned 
-and causing confusion thereby slowing down our changes.
+Where you have a replicable source of errors, a regular expression can be useful for jumping to the next error or helping confirm the solution to solve multiple errors.
 
-### Ecology
+### Duplicating code changes
 
-As part of learning the Rust programming language I attempted this challange [On reddit](https://www.reddit.com/r/dailyprogrammer/comments/27h53e/662014_challenge_165_hard_simulated_ecology_the/)
+Sometimes lots of method-calls need to be changed in a very large file or over a folder. Two major examples of this are;
+
+1.  Adding logging to lots of variable assignments for the so development team can see which code is triggered
+2.  Changing method-calls to use a newly created replacement that takes different arguments. I needed to do this as logic was moved further ahead in the pipleline
+
+VScode features a preview of the replacement result so changes can all be looked at before they are executed.
+
+### Find references without a language server protocol
+
+I have worked with programming languages without an LSP, so finding all uses of a function or a string value that shares the same name
+as a key word can be difficult.
+
+One example is a keyword ```EQ``` being the same as a site name "EQ". I used regular expressions to find all instances of the string 
+and not the keyword, I used the regular expression ```[",]EQ[",]``` as EQ can appear in a comma separated string "EQ,AR".
+
+### Quickly add logging to a test program.
+
+If a variable is getting an unexpected value, the easiest way to find out what is happening without debugging tools, is to 
+log at every instance the variable is mutated and then work from there.
 
 
-The task is to make a forest on a 2D array(chessboard like grid) and simulate the forest for 400 years. 
-The short summary is.
-
-Each square can contain
-
-*   Trees, which will be at one of these life stages, sapling, tree or elder
-*   LumberJack which will cut down mature and elder trees
-*   Bears which will take out lumberJacks
-
-Each entity present has its own moving, spawning and despawning rules, with monthly changes and a yearly census.
-
-In addition to this I refactored the program so it can be optionally run _muli-Threaded_
-
-### Various command line tools
-
-I was often supplied with data in a format the user could print,edit and then needed to upload in a different format.
-
-The user often edited a file that was easy to read but more challenging to parse. I made command line tools to quickly run in vscode to convert the file in a way that could be uploaded.
