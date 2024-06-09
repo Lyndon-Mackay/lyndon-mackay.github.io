@@ -1,4 +1,4 @@
-A selected list of Rust projects I have completed
+import{d as a,m as o,c as r,a as e,n as s,u as n,F as i,o as l,e as d}from"./index-Ca-X25_M.js";const c=`A selected list of Rust projects I have completed
 
 ### Formatter for the Abl Progress language
 Currently the ABL Progress language does not have a formatter. I noticed
@@ -38,4 +38,4 @@ I was often supplied with data in a format the user could
 print and edit, and then needed to upload in a different format.
 The user often edited a file that was easy to read but more challenging
 to parse. I made command line tools to quickly run in vscode to convert
-the file in a way that could be uploaded.
+the file in a way that could be uploaded.`,h=["innerHTML"],f=a({__name:"RustView",setup(m){const t=o(c).mkd;return(u,g)=>(l(),r(i,null,[e("h2",{style:s(n(d)("h2"))},"A selected list of Rust projects I have completed",4),e("article",{id:"contents",innerHTML:n(t)},null,8,h)],64))}});export{f as default};
