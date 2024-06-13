@@ -38,3 +38,14 @@ print and edit, and then needed to upload in a different format.
 The user often edited a file that was easy to read but more challenging
 to parse. I made command line tools to quickly run in vscode to convert
 the file in a way that could be uploaded.
+
+### Helix text editor 
+
+#### Split Views with Synced Scrolling
+
+A non trivial feature request was the ability to split a text editor view
+vertically such that text on the right view was a page down on the left view.
+This required me to learn a new codebase in a new domain then figure out how 
+to add the feature. Which I did successfully however the sizes of the changes
+required prevented it from being added as it was deemed to be outside the scope
+of the base text editor

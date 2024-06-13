@@ -1,4 +1,4 @@
-import{d as a,m as o,c as r,a as e,n as s,u as n,F as i,o as d,e as l}from"./index-DNvjE_HS.js";const c=`A selected list of Rust projects I have completed
+import{d as a,m as o,c as r,a as e,n as s,u as t,F as i,o as d,e as l}from"./index-DdRBqozk.js";const h=`A selected list of Rust projects I have completed
 
 ### Formatter for the ABL Progress language
 Currently the ABL Progress language does not have a formatter. I noticed
@@ -37,4 +37,16 @@ I was often supplied with data in a format the user could
 print and edit, and then needed to upload in a different format.
 The user often edited a file that was easy to read but more challenging
 to parse. I made command line tools to quickly run in vscode to convert
-the file in a way that could be uploaded.`,h=["innerHTML"],f=a({__name:"RustView",setup(m){const t=o(c).mkd;return(u,g)=>(d(),r(i,null,[e("h2",{style:s(n(l)("h2"))},"A selected list of Rust projects I have completed",4),e("article",{id:"contents",innerHTML:n(t)},null,8,h)],64))}});export{f as default};
+the file in a way that could be uploaded.
+
+### Helix text editor 
+
+#### Split Views with Synced Scrolling
+
+A non trivial feature request was the ability to split a text editor view
+vertically such that text on the right view was a page down on the left view.
+This required me to learn a new codebase in a new domain then figure out how 
+to add the feature. Which I did successfully however the sizes of the changes
+required prevented it from being added as it was deemed to be outside the scope
+of the base text editor
+`,c=["innerHTML"],p=a({__name:"RustView",setup(m){const n=o(h).mkd;return(u,g)=>(d(),r(i,null,[e("h2",{style:s(t(l)("h2"))},"A selected list of Rust projects I have completed",4),e("article",{id:"contents",innerHTML:t(n)},null,8,c)],64))}});export{p as default};
