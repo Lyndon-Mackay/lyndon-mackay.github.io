@@ -6,8 +6,8 @@ import { elementColour } from "../themes/index";
   <article>
     <h3 :style="elementColour('h3')">Relational database</h3>
     <h4 :style="elementColour('h4')">ABL Progress</h4>
-    <p :style="elementColour('p')">Abl progress is a relational database management system</p>
-    <p :style="elementColour('p')">I have used this programming language for over five years</p>
+    <p :style="elementColour('p')">ABL progress is a relational database management system</p>
+    <p :style="elementColour('p')">I have used this programming language for over five years;</p>
     <ul>
       <li :style="elementColour('li')">Extracting data for stakeholders</li>
       <li :style="elementColour('li')">Creating new functionality </li>
@@ -15,11 +15,11 @@ import { elementColour } from "../themes/index";
       <li :style="elementColour('li')">Improving validation logic</li>
       <li :style="elementColour('li')">Removing data</li>
     </ul>
-    <h4 :style="elementColour('h4')">How ABL progress maps to SQL</h4>
-    <p :style="elementColour('p')"> ABL progress and SQL are both relational programming languages.<br>
-      ABL tends to be more imperative and less concise then SQL.<br>
+    <h4 :style="elementColour('h4')">How ABL progress maps to SQL;</h4>
+    <p :style="elementColour('p')"> ABL progress and SQL are both relational programming languages<br>
+      ABL tends to be more imperative and less concise then SQL<br>
       ABL progress tends to handle application data as
-      well.
+      well
     </p>
     <hr>
     <h5 :style="elementColour('h5')">ABL Progress Selecting Data</h5>
@@ -97,7 +97,7 @@ import { elementColour } from "../themes/index";
   <article>
     <h3 :style="elementColour('h3')">SQL </h3>
     <p :style="elementColour('p')">
-      I have used my SQL at university for various assignments and had it interop with websites. I have also used T-SQL as part of my database courses
+      I have used my SQL at university for various assignments and had it interop with websites. I have also used T-SQL as part of my database courses.
     </p>
   </article>
 </template>

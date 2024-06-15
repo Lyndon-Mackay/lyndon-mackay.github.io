@@ -2,7 +2,7 @@
 I have five years of experience primarily helping maintain an ERP system
 for a timber door company.
 I learnt about the process of how a door is constructed
-having walked around and observed the factory.
+having during factory site visits.
 ### Aluminium windows, doors, shower-screens and wardrobes
 After closing all the actionable timber door support tickets, I started
 assisting the fenestration side of the business.

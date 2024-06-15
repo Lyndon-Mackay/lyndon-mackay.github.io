@@ -1,4 +1,3 @@
-A selected list of Rust projects I have completed
 
 ### Formatter for the ABL Progress language
 Currently the ABL Progress language does not have a formatter. I noticed
@@ -19,10 +18,9 @@ thereby slowing down our changes.
 ### Ecology
 As part of learning the Rust programming language I attempted this challenge [On
 reddit](https://www.reddit.com/r/dailyprogrammer/comments/27h53e/662014_challenge_165_hard_simulated_ecology_the/)
-The task is to make a forest on a 2D array(chessboard
+The task is to make a forest on a 2D array (chessboard
 like grid) and simulate the forest for 400 years.
-The short summary is.
-Each square can contain:
+The short summary is each square can contain:
 * Trees, which will be at one of these life stages, sapling, tree or
 elder
 * LumberJack which will cut down mature and elder trees
@@ -46,6 +44,6 @@ the file in a way that could be uploaded.
 A non trivial feature request was the ability to split a text editor view
 vertically such that text on the right view was a page down on the left view.
 This required me to learn a new codebase in a new domain then figure out how 
-to add the feature. Which I did successfully however the sizes of the changes
+to add the feature. This I did successfully, however the sizes of the changes
 required prevented it from being added as it was deemed to be outside the scope
 of the base text editor

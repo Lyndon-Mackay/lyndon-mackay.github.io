@@ -1,4 +1,4 @@
-import{d as a,m as s,c as i,a as e,n as r,u as n,F as o,o as d,e as m}from"./index-DdRBqozk.js";const g=`### This website is written using VueJs
+import{d as a,m as s,c as i,a as e,n as r,u as n,F as o,o as m,e as d}from"./index-BjhBTM5Q.js";const c=`### This website is written using VueJs
 
 As part of diversifying my skillset I learnt the Vue framework. I have created this website as a playground for trying out various Vue and other web development practices.
 
@@ -23,10 +23,10 @@ My first tutorial project with Vue was to create a fictional commerce store in T
 
 ### Static site generator with Hugo
 
-My first job out of university was working for the networking team transferring data from a drupel site to markdown. The markdown data was used to along with a static site generator for their new website.
+My first job out of university was working for the networking team transferring data from a drupel site to markdown. The markdown data was along with a static site generator for their new website.
 
 ### University as part of my degree
 
-As part of my bachelor's thesis I transferred a network analytics app to the web. Additionally I have done various web assignments interacting with database using ajax along with serverside programming.
+As part of my bachelor's thesis I transferred a network analytics app to the web. Additionally I have completed various web assignments interacting with database using ajax along with serverside programming.
 
-`,u=["innerHTML"],p=a({__name:"WebdevelopmentView",setup(c){const t=s(g).mkd;return(l,h)=>(d(),i(o,null,[e("h2",{style:r(n(m)("h2"))}," Web Development ",4),e("article",{id:"contents",innerHTML:n(t)},null,8,u)],64))}});export{p as default};
+`,g=["innerHTML"],p=a({__name:"WebdevelopmentView",setup(l){const t=s(c).mkd;return(u,h)=>(m(),i(o,null,[e("h2",{style:r(n(d)("h2"))}," Web Development ",4),e("article",{id:"contents",innerHTML:n(t)},null,8,g)],64))}});export{p as default};

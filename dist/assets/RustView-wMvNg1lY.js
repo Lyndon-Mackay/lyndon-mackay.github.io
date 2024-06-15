@@ -1,5 +1,4 @@
-import{d as a,m as o,c as r,a as e,n as s,u as t,F as i,o as d,e as l}from"./index-DdRBqozk.js";const h=`A selected list of Rust projects I have completed
-
+import{d as a,m as o,c as r,a as e,n as s,u as t,F as i,o as d,e as l}from"./index-BjhBTM5Q.js";const h=`
 ### Formatter for the ABL Progress language
 Currently the ABL Progress language does not have a formatter. I noticed
 that most of our large programs had inconsistent indenting, which made
@@ -19,10 +18,9 @@ thereby slowing down our changes.
 ### Ecology
 As part of learning the Rust programming language I attempted this challenge [On
 reddit](https://www.reddit.com/r/dailyprogrammer/comments/27h53e/662014_challenge_165_hard_simulated_ecology_the/)
-The task is to make a forest on a 2D array(chessboard
+The task is to make a forest on a 2D array (chessboard
 like grid) and simulate the forest for 400 years.
-The short summary is.
-Each square can contain:
+The short summary is each square can contain:
 * Trees, which will be at one of these life stages, sapling, tree or
 elder
 * LumberJack which will cut down mature and elder trees
@@ -46,7 +44,7 @@ the file in a way that could be uploaded.
 A non trivial feature request was the ability to split a text editor view
 vertically such that text on the right view was a page down on the left view.
 This required me to learn a new codebase in a new domain then figure out how 
-to add the feature. Which I did successfully however the sizes of the changes
+to add the feature. This I did successfully, however the sizes of the changes
 required prevented it from being added as it was deemed to be outside the scope
 of the base text editor
 `,c=["innerHTML"],p=a({__name:"RustView",setup(m){const n=o(h).mkd;return(u,g)=>(d(),r(i,null,[e("h2",{style:s(t(l)("h2"))},"A selected list of Rust projects I have completed",4),e("article",{id:"contents",innerHTML:t(n)},null,8,c)],64))}});export{p as default};

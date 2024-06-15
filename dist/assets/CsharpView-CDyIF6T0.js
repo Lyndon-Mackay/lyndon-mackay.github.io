@@ -1,6 +1,6 @@
-import{d as a,m as o,c as r,a as e,n as s,u as n,F as i,o as m,e as l}from"./index-DdRBqozk.js";const c=`### C# at University
+import{d as a,m as o,c as r,a as e,n as s,u as n,F as i,o as m,e as l}from"./index-BjhBTM5Q.js";const c=`### C# at University
 
-C# is the first programming language I learnt at university. I ended up using C# for the vast majority of my university assignments
+C# is the first programming language I learnt at university. I ended up using C# for the vast majority of my university assignments.
 
 #### A Calculator, with voice activation and sending browser history over network
 
@@ -9,12 +9,12 @@ I came up with the idea of sharing history over the network.
 
 #### MVC website
 
-I made a similar website to this one with some example SQL in order to learn MVC concepts
+I made a similar website to this one with some, example SQL in order to learn MVC concepts.
 
 ### F#
 
 After university I learnt F#. Initially this was to better understand LINQ as I did not have a great deal of experience with 
-functional programming. I soon discovered how much I love the type system; I ended doing some daily programmer challanges to explore 
+functional programming. I soon discovered how much I love the type system; I ended doing some daily programmer challenges to explore 
 some more advanced programs.
 
 #### Fsharp Worm Wars

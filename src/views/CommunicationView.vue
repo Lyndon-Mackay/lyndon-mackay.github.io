@@ -66,7 +66,7 @@ import { elementColour } from "../themes/index";
     </pre>
     <img src="../assets/honeycomb.svg" alt="Output of honeycomb graphviz" />
     <hr>
-    <h4 :style="elementColour('h4')">Example of how I can explain my changes to a process in orange based of an example
+    <h4 :style="elementColour('h4')">Example of how I can explain my changes to a process in orange, based of an example
       of retrofitting glass thickness validation in lots of copy and pasted code over a decade </h4>
     <pre :style="elementColour('pre')">
       digraph G {
