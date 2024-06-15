@@ -1,15 +1,16 @@
-import{d as o,m as a,c as s,a as e,n as i,u as n,F as r,o as c,e as d}from"./index-DdRBqozk.js";const h=`### Linking Vendor data with ERP data
+import{d as o,m as a,c as s,a as e,n as i,u as n,F as r,o as c,e as d}from"./index-BjhBTM5Q.js";const h=`### Linking Vendor data with ERP data
 
-Two common scenarios have occured when vendors had changes we needed to address in our ERP system
+Two common scenarios have occured when vendors had changes we needed to address in our ERP system;
 
 1.  Vendors had a change in pricing, so the costs need to be updated
 2.  Vendors had a product rationalisation, thereby removing many items from their catalogue
 
-The data was presented to me in an excel spreadsheet. I would then use xlookups on upcs numbers or item vendor codes to get the ERP item numbers. After I found the information I was looking for then I create a new upload sheet to implement the changes
+The data was presented to me in an excel spreadsheet. I would then use xlookups on upcs numbers or item vendor codes to get the ERP item numbers. 
+After I found the information I was looking for, I create a new upload sheet to implement the changes.
 
 ### Presenting Large (proposed) changes to ERP Experts
 
-Sometimes the easiest way to explain changes or confirm your understanding is to present the changes. I often used excel for just doing that as most non-technical users can intuitively understand excel.
+Sometimes the easiest way to explain changes or confirm your understanding is to present the changes. I often used excel for doing that as most non-technical users can intuitively understand excel.
 
 ### Conditional Formatting
 
