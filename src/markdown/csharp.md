@@ -2,6 +2,10 @@
 
 C# is the first programming language I learnt at university. I ended up using C# for the vast majority of my university assignments.
 
+#### Glass subsystem 
+
+Maintaining a program that converts vendor pricing data into ERP compatitable data and vice versa. 
+
 #### A Calculator, with voice activation and sending browser history over network
 
 As part of a job interview project I was tasked with making a calculator with our own unique twist. 

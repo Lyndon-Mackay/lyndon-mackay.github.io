@@ -21,10 +21,14 @@ body {
 }
 
 #theme {
-  display: block;
+  display: flex;
   color: #fff;
   border-color: gray;
   border-style: dotted;
+}
+
+#themeDiv {
+	width: fit-content;
 }
 
 #theme-config {
