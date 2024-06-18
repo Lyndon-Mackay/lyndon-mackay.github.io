@@ -2,7 +2,7 @@
 import { elementColour, elementColourByTheme } from "./themes/index";
 
 import { themeStore } from "./stores/themeStore";
-import { ref, watch, type Ref, type StyleValue } from "vue";
+import { ref, watch, type Ref, type StyleValue,computed } from "vue";
 import { storeToRefs } from "pinia";
 
 import { useRoute, useRouter } from "vue-router";
@@ -27,6 +27,9 @@ const themeListDisplay = ref(false);
 //To restore after preview has been selected
 const savedTheme = ref('')
 
+const arrow = computed(() => {
+  return themeListDisplay.value ?"⮛" : "➢" 
+})
 
 watch(currentTheme, () => {
   setTheme(currentTheme.value)
@@ -136,7 +139,7 @@ function themeAssigned(name: string) {
 
 <template>
   <div id="themeDiv">
-    <span id="theme" @click="toggleThemeDisplay">Theme <span v-show="!themeListDisplay">➢</span><span v-show="themeListDisplay" >⮛</span> </span>
+    <span id="theme" @click="toggleThemeDisplay">Theme {{arrow}} </span>
     <ul class="themeList" v-show="themeListDisplay">
       <li class="themeListItem" @click="themeAssigned('default')" @mouseover="previewTheme('default')"
         @mouseout="exitPreviewTheme()">Default</li>
