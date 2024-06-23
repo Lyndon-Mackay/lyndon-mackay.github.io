@@ -31,6 +31,7 @@ const arrow = computed(() => {
   return themeListDisplay.value ?"⮛" : "➢" 
 })
 
+
 watch(currentTheme, () => {
   setTheme(currentTheme.value)
 });
@@ -155,7 +156,7 @@ function themeAssigned(name: string) {
   </div>
   <div id="main">
     <section id="title">
-      <h1 :style="elementColour('h1')">Lyndon's website</h1>
+      <RouterLink :to= "{name:'Home'}" class="no-underline"><h1 :style="elementColour('h1')">Lyndon's website</h1></RouterLink>
     </section>
     <section></section>
 

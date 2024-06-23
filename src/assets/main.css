@@ -19,6 +19,9 @@ body {
   justify-self: center;
   max-width: 900px;
 }
+.no-underline{
+	text-decoration-line: none;
+}
 
 #theme {
   display: flex;
