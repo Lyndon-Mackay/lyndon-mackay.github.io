@@ -34,6 +34,11 @@ const routes = [
     component: () => import("../views/CommunicationView.vue"),
   },
   {
+    path:"/documentation",
+    name: "Documentation",
+    component: () => import("../views/DocumentationView.vue"),
+  },
+  {
     path: "/excel",
     name: "Excel",
     component: () => import("../views/ExcelView.vue"),

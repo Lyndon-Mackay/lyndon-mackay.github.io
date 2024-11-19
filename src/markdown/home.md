@@ -8,6 +8,10 @@ Bachelor's degree in Computer and Mathematical Sciences
 An experienced programmer especially in the context of maintaining an ERP system.<br>
 I have programmed in many languages including C#, F#, Java, Rust, Javascript, Haskell. I am knowledgeable about business operations in a construction and warehousing context.<br>
 
+### Bevy Logging tutorial
+I wrote a tutorial on how to log issues in Bevy.
+[tutorial](https://bevy-logging.github.io/)
+
 ### Qualities 
 
 
